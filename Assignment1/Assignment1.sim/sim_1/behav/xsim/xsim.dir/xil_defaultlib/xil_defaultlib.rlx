@@ -2,10 +2,10 @@
 2020.1
 May 27 2020
 19:59:15
-/home/sebastian/Desktop/Git/HWSWCoDesign/Assignment1/Assignment1.srcs/sources_1/imports/mips_single_cycle/Instr_Mem.vhd,1615231310,vhdl,,,,memory,,,,,,,,
+/home/sebastian/Desktop/Git/HWSWCoDesign/Assignment1/Assignment1.srcs/sources_1/imports/mips_single_cycle/Instr_Mem.vhd,1648666621,vhdl,,,,memory,,,,,,,,
 /home/sebastian/Desktop/Git/HWSWCoDesign/Assignment1/Assignment1.srcs/sources_1/imports/mips_single_cycle/alu.vhd,1615205924,vhdl,,,,alu,,,,,,,,
 /home/sebastian/Desktop/Git/HWSWCoDesign/Assignment1/Assignment1.srcs/sources_1/imports/mips_single_cycle/alu_op.vhd,1615205934,vhdl,,,,alu_op,,,,,,,,
-/home/sebastian/Desktop/Git/HWSWCoDesign/Assignment1/Assignment1.srcs/sources_1/imports/mips_single_cycle/control_unit.vhd,1615230528,vhdl,,,,control_unit,,,,,,,,
+/home/sebastian/Desktop/Git/HWSWCoDesign/Assignment1/Assignment1.srcs/sources_1/imports/mips_single_cycle/control_unit.vhd,1648642752,vhdl,,,,control_unit,,,,,,,,
 /home/sebastian/Desktop/Git/HWSWCoDesign/Assignment1/Assignment1.srcs/sources_1/imports/mips_single_cycle/data_memory.vhd,1615210106,vhdl,,,,data_memory,,,,,,,,
 /home/sebastian/Desktop/Git/HWSWCoDesign/Assignment1/Assignment1.srcs/sources_1/imports/mips_single_cycle/mips.vhd,1615208246,vhdl,,,,mips,,,,,,,,
 /home/sebastian/Desktop/Git/HWSWCoDesign/Assignment1/Assignment1.srcs/sources_1/imports/mips_single_cycle/mips_tb.vhd,1615190394,vhdl,,,,mips_tb,,,,,,,,

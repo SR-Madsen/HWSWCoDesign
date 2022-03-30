@@ -55,7 +55,7 @@ begin
         else 
             case opcode is
                 when "000000" =>            -- add  
-                    alu_op <= "10"; -- R-type instruction
+                    alu_op <= "10"; -- Action given by function
                     reg_write <= '1'; -- Write to register
                     dr_select <= '0'; -- Instruction(15-11) indicates destination register
                     reg_or_imm <= '0'; -- ALU input B is register 2
@@ -64,7 +64,7 @@ begin
                     alu_or_mem <= '0'; -- Destination register is sourced from ALU result
                     
                 when "001000" =>            -- addi
-                    alu_op <= "00"; -- I-type instruction
+                    alu_op <= "00"; -- Add for load
                     reg_write <= '1'; -- Write to register
                     dr_select <= '1'; -- Instruction(20-16) indicates destination register
                     reg_or_imm <= '1'; -- ALU input B is immediate at instruction(15-0)
@@ -73,7 +73,7 @@ begin
                     alu_or_mem <= '0'; -- Destination register is sourced from ALU result
 
                 when "000010" =>            -- jump
-                    alu_op <= "01"; -- Branching instruction
+                    alu_op <= "10"; -- Does not matter
                     reg_write <= '0'; -- Do not write to register
                     dr_select <= '1'; -- Does not matter
                     reg_or_imm <= '1'; -- ALU input B is immediate/address at instruction(15-0)
@@ -82,7 +82,7 @@ begin
                     alu_or_mem <= '0'; -- Destination register is sourced from ALU result
                     
                 when "000100" =>            -- beq
-                    alu_op <= "01"; -- Branching instruction
+                    alu_op <= "01"; -- Subtract for branch equal
                     reg_write <= '0'; -- Do not write to register
                     dr_select <= '1'; -- Instruction(20-16) indicates destination register
                     reg_or_imm <= '0'; -- ALU input B is register 2
@@ -91,16 +91,16 @@ begin
                     alu_or_mem <= '0'; -- Destination register is sourced from ALU result
 
                 when "101011" =>            -- sw
-                    alu_op <= "00"; -- I-type instruction
+                    alu_op <= "00"; -- Add for store
                     reg_write <= '0'; -- Do not write to register
-                    dr_select <= '1'; -- Instruction(20-16) indicates destination register
+                    dr_select <= '1'; -- Does not matter
                     reg_or_imm <= '1'; -- ALU input B is immediate/address at instruction(15-0)
                     pc_select <= "00"; -- Program counter = Program counter + 4
                     mem_wrt_en <= '1'; -- Write to memory
                     alu_or_mem <= '0'; -- Does not matter
 
                 when "100011" =>            -- lw
-                    alu_op <= "00"; -- I-type instruction
+                    alu_op <= "00"; -- Add for load
                     reg_write <= '1'; -- Write to register
                     dr_select <= '1'; -- Instruction(20-16) indicates destination register
                     reg_or_imm <= '1'; -- ALU input B is immediate/address at instruction(15-0)

@@ -35,20 +35,20 @@ architecture Behavioral of memory is
     type ROM_type is array (0 to 5 ) of std_logic_vector(31 downto 0);
     constant rom_data: ROM_type:=(
         -- LISTING 1
-        x"21290006",    -- addi t1 t1 0x6
-        x"214A0007",    -- addi t2 t2 0x7
-        x"01495820",    -- add t3 t2 t1
-        x"01496022",    -- sub t4 t2 t1
-        x"0149682A",    -- slt t5 t2 t1
-        x"08000001"     -- j 0x1
+--        x"21290006",    -- addi t1 t1 0x6
+--        x"214A0007",    -- addi t2 t2 0x7
+--        x"01495820",    -- add t3 t2 t1
+--        x"01496022",    -- sub t4 t2 t1
+--        x"0149682A",    -- slt t5 t2 t1
+--        x"08000001"     -- j 0x1
         
         --LISTING 2
---        x"21290003",      -- addi t1 t1 0x3  
---        x"214A0001",      -- addi t2 t2 0x1  
---        x"112A0001",      -- beq t1 t2 0x1
---        x"08000001",      -- j 0x1
---        x"01495820",      -- add t3 t2 t1
---        x"00000000"
+        x"21290003",      -- addi t1 t1 0x3  
+        x"214A0001",      -- addi t2 t2 0x1  
+        x"112A0001",      -- beq t1 t2 0x1
+        x"08000001",      -- j 0x1
+        x"01495820",      -- add t3 t2 t1
+        x"00000000"
         
         --LISTING 3       
 --        x"21290001",        -- addi t1 t1 0x1 
