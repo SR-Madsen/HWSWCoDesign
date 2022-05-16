@@ -1,0 +1,595 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<spirit:component xmlns:xilinx="http://www.xilinx.com" xmlns:spirit="http://www.spiritconsortium.org/XMLSchema/SPIRIT/1685-2009" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <spirit:vendor>sdu.dk</spirit:vendor>
+  <spirit:library>customized_ip</spirit:library>
+  <spirit:name>design_1_MIPS_BRAM_IFACE_0_0</spirit:name>
+  <spirit:version>1.0</spirit:version>
+  <spirit:busInterfaces>
+    <spirit:busInterface>
+      <spirit:name>RST</spirit:name>
+      <spirit:busType spirit:vendor="xilinx.com" spirit:library="signal" spirit:name="reset" spirit:version="1.0"/>
+      <spirit:abstractionType spirit:vendor="xilinx.com" spirit:library="signal" spirit:name="reset_rtl" spirit:version="1.0"/>
+      <spirit:slave/>
+      <spirit:portMaps>
+        <spirit:portMap>
+          <spirit:logicalPort>
+            <spirit:name>RST</spirit:name>
+          </spirit:logicalPort>
+          <spirit:physicalPort>
+            <spirit:name>RST</spirit:name>
+          </spirit:physicalPort>
+        </spirit:portMap>
+      </spirit:portMaps>
+      <spirit:parameters>
+        <spirit:parameter>
+          <spirit:name>POLARITY</spirit:name>
+          <spirit:value spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.RST.POLARITY">ACTIVE_LOW</spirit:value>
+          <spirit:vendorExtensions>
+            <xilinx:parameterInfo>
+              <xilinx:parameterUsage>none</xilinx:parameterUsage>
+            </xilinx:parameterInfo>
+          </spirit:vendorExtensions>
+        </spirit:parameter>
+        <spirit:parameter>
+          <spirit:name>INSERT_VIP</spirit:name>
+          <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="BUSIFPARAM_VALUE.RST.INSERT_VIP">0</spirit:value>
+          <spirit:vendorExtensions>
+            <xilinx:parameterInfo>
+              <xilinx:parameterUsage>simulation.rtl</xilinx:parameterUsage>
+            </xilinx:parameterInfo>
+          </spirit:vendorExtensions>
+        </spirit:parameter>
+      </spirit:parameters>
+    </spirit:busInterface>
+    <spirit:busInterface>
+      <spirit:name>CLK</spirit:name>
+      <spirit:busType spirit:vendor="xilinx.com" spirit:library="signal" spirit:name="clock" spirit:version="1.0"/>
+      <spirit:abstractionType spirit:vendor="xilinx.com" spirit:library="signal" spirit:name="clock_rtl" spirit:version="1.0"/>
+      <spirit:slave/>
+      <spirit:portMaps>
+        <spirit:portMap>
+          <spirit:logicalPort>
+            <spirit:name>CLK</spirit:name>
+          </spirit:logicalPort>
+          <spirit:physicalPort>
+            <spirit:name>CLK</spirit:name>
+          </spirit:physicalPort>
+        </spirit:portMap>
+      </spirit:portMaps>
+      <spirit:parameters>
+        <spirit:parameter>
+          <spirit:name>ASSOCIATED_RESET</spirit:name>
+          <spirit:value spirit:id="BUSIFPARAM_VALUE.CLK.ASSOCIATED_RESET">RST</spirit:value>
+        </spirit:parameter>
+        <spirit:parameter>
+          <spirit:name>FREQ_HZ</spirit:name>
+          <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.CLK.FREQ_HZ">100000000</spirit:value>
+          <spirit:vendorExtensions>
+            <xilinx:parameterInfo>
+              <xilinx:parameterUsage>none</xilinx:parameterUsage>
+            </xilinx:parameterInfo>
+          </spirit:vendorExtensions>
+        </spirit:parameter>
+        <spirit:parameter>
+          <spirit:name>FREQ_TOLERANCE_HZ</spirit:name>
+          <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.CLK.FREQ_TOLERANCE_HZ">0</spirit:value>
+          <spirit:vendorExtensions>
+            <xilinx:parameterInfo>
+              <xilinx:parameterUsage>none</xilinx:parameterUsage>
+            </xilinx:parameterInfo>
+          </spirit:vendorExtensions>
+        </spirit:parameter>
+        <spirit:parameter>
+          <spirit:name>PHASE</spirit:name>
+          <spirit:value spirit:format="float" spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.CLK.PHASE">0.000</spirit:value>
+          <spirit:vendorExtensions>
+            <xilinx:parameterInfo>
+              <xilinx:parameterUsage>none</xilinx:parameterUsage>
+            </xilinx:parameterInfo>
+          </spirit:vendorExtensions>
+        </spirit:parameter>
+        <spirit:parameter>
+          <spirit:name>CLK_DOMAIN</spirit:name>
+          <spirit:value spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.CLK.CLK_DOMAIN">design_1_CLK_0</spirit:value>
+          <spirit:vendorExtensions>
+            <xilinx:parameterInfo>
+              <xilinx:parameterUsage>none</xilinx:parameterUsage>
+            </xilinx:parameterInfo>
+          </spirit:vendorExtensions>
+        </spirit:parameter>
+        <spirit:parameter>
+          <spirit:name>ASSOCIATED_BUSIF</spirit:name>
+          <spirit:value spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.CLK.ASSOCIATED_BUSIF"/>
+          <spirit:vendorExtensions>
+            <xilinx:parameterInfo>
+              <xilinx:parameterUsage>none</xilinx:parameterUsage>
+            </xilinx:parameterInfo>
+          </spirit:vendorExtensions>
+        </spirit:parameter>
+        <spirit:parameter>
+          <spirit:name>INSERT_VIP</spirit:name>
+          <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="BUSIFPARAM_VALUE.CLK.INSERT_VIP">0</spirit:value>
+          <spirit:vendorExtensions>
+            <xilinx:parameterInfo>
+              <xilinx:parameterUsage>simulation.rtl</xilinx:parameterUsage>
+            </xilinx:parameterInfo>
+          </spirit:vendorExtensions>
+        </spirit:parameter>
+      </spirit:parameters>
+    </spirit:busInterface>
+  </spirit:busInterfaces>
+  <spirit:model>
+    <spirit:ports>
+      <spirit:port>
+        <spirit:name>CLK</spirit:name>
+        <spirit:wire>
+          <spirit:direction>in</spirit:direction>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>std_logic</spirit:typeName>
+              <spirit:viewNameRef>dummy_view</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>RST</spirit:name>
+        <spirit:wire>
+          <spirit:direction>in</spirit:direction>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>std_logic</spirit:typeName>
+              <spirit:viewNameRef>dummy_view</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>CS</spirit:name>
+        <spirit:wire>
+          <spirit:direction>out</spirit:direction>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>std_logic</spirit:typeName>
+              <spirit:viewNameRef>dummy_view</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>WE</spirit:name>
+        <spirit:wire>
+          <spirit:direction>out</spirit:direction>
+          <spirit:vector>
+            <spirit:left spirit:format="long">3</spirit:left>
+            <spirit:right spirit:format="long">0</spirit:right>
+          </spirit:vector>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>std_logic_vector</spirit:typeName>
+              <spirit:viewNameRef>dummy_view</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>ADDR</spirit:name>
+        <spirit:wire>
+          <spirit:direction>out</spirit:direction>
+          <spirit:vector>
+            <spirit:left spirit:format="long">31</spirit:left>
+            <spirit:right spirit:format="long">0</spirit:right>
+          </spirit:vector>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>std_logic_vector</spirit:typeName>
+              <spirit:viewNameRef>dummy_view</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>Data_In</spirit:name>
+        <spirit:wire>
+          <spirit:direction>in</spirit:direction>
+          <spirit:vector>
+            <spirit:left spirit:format="long">31</spirit:left>
+            <spirit:right spirit:format="long">0</spirit:right>
+          </spirit:vector>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>std_logic_vector</spirit:typeName>
+              <spirit:viewNameRef>dummy_view</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>Data_Out</spirit:name>
+        <spirit:wire>
+          <spirit:direction>out</spirit:direction>
+          <spirit:vector>
+            <spirit:left spirit:format="long">31</spirit:left>
+            <spirit:right spirit:format="long">0</spirit:right>
+          </spirit:vector>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>std_logic_vector</spirit:typeName>
+              <spirit:viewNameRef>dummy_view</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+    </spirit:ports>
+  </spirit:model>
+  <spirit:description>MIPS_BRAM_IFACE_v1_0</spirit:description>
+  <spirit:parameters>
+    <spirit:parameter>
+      <spirit:name>Component_Name</spirit:name>
+      <spirit:value spirit:resolve="user" spirit:id="PARAM_VALUE.Component_Name" spirit:order="1">design_1_MIPS_BRAM_IFACE_0_0</spirit:value>
+    </spirit:parameter>
+  </spirit:parameters>
+  <spirit:vendorExtensions>
+    <xilinx:coreExtensions>
+      <xilinx:displayName>MIPS_BRAM_IFACE_v1_0</xilinx:displayName>
+      <xilinx:definitionSource>package_project</xilinx:definitionSource>
+      <xilinx:coreRevision>26</xilinx:coreRevision>
+      <xilinx:tags>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4390a422_ARCHIVE_LOCATION">c:/users/brehm/desktop/vivado_proj/project_mips_ip/project_mips_ip.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@37d6779e_ARCHIVE_LOCATION">c:/users/brehm/desktop/vivado_proj/project_mips_ip/project_mips_ip.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5e5475d9_ARCHIVE_LOCATION">c:/users/brehm/desktop/vivado_proj/project_mips_ip/project_mips_ip.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7f0434b0_ARCHIVE_LOCATION">c:/users/brehm/desktop/vivado_proj/project_mips_ip/project_mips_ip.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@876c5f0_ARCHIVE_LOCATION">c:/users/brehm/desktop/vivado_proj/project_mips_ip/project_mips_ip.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@54bdd17e_ARCHIVE_LOCATION">C:/Users/brehm/Dropbox/Vivado_Projects/sources/ip_cores</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6f00e655_ARCHIVE_LOCATION">C:/Users/brehm/Dropbox/Vivado_Projects/sources/ip_cores</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@333a117d_ARCHIVE_LOCATION">C:/Users/brehm/Dropbox/Vivado_Projects/sources/ip_cores</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@558ba583_ARCHIVE_LOCATION">c:/Users/brehm/Dropbox/Vivado_Projects/sources/ip_cores/project_mips_ip/project_mips_ip.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@63b12db1_ARCHIVE_LOCATION">c:/Users/brehm/Dropbox/Vivado_Projects/sources/ip_cores/project_mips_ip/project_mips_ip.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@48191412_ARCHIVE_LOCATION">c:/Users/brehm/Dropbox/Vivado_Projects/sources/ip_cores/project_mips_ip/project_mips_ip.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@632cbcf8_ARCHIVE_LOCATION">c:/Users/brehm/Dropbox/Vivado_Projects/sources/ip_cores/project_mips_ip/project_mips_ip.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@43cea25e_ARCHIVE_LOCATION">c:/Users/brehm/Dropbox/Vivado_Projects/sources/ip_cores/project_mips_ip/project_mips_ip.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6f62d1d7_ARCHIVE_LOCATION">c:/Users/brehm/Dropbox/Vivado_Projects/sources/ip_cores/project_mips_ip/project_mips_ip.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6d52c60_ARCHIVE_LOCATION">c:/Users/brehm/Dropbox/Vivado_Projects/sources/ip_cores/project_mips_ip/project_mips_ip.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4b24cdc1_ARCHIVE_LOCATION">c:/Users/brehm/Dropbox/Vivado_Projects/sources/ip_cores/project_mips_ip/project_mips_ip.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3404ac87_ARCHIVE_LOCATION">c:/Users/brehm/Dropbox/Vivado_Projects/sources/ip_cores/project_mips_ip/project_mips_ip.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@12d365e2_ARCHIVE_LOCATION">c:/Users/brehm/Dropbox/Vivado_Projects/sources/ip_cores/project_mips_ip/project_mips_ip.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@f3bb2a1_ARCHIVE_LOCATION">c:/Users/brehm/Dropbox/Vivado_Projects/sources/ip_cores/project_mips_ip/project_mips_ip.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@72e2b601_ARCHIVE_LOCATION">c:/Users/brehm/Dropbox/Vivado_Projects/sources/ip_cores/project_mips_ip/project_mips_ip.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@216336_ARCHIVE_LOCATION">c:/Users/brehm/Dropbox/Vivado_Projects/sources/ip_cores/project_mips_ip/project_mips_ip.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2047cbff_ARCHIVE_LOCATION">c:/Users/brehm/Dropbox/Vivado_Projects/sources/ip_cores/project_mips_ip/project_mips_ip.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@69e2df16_ARCHIVE_LOCATION">c:/Users/brehm/Dropbox/Vivado_Projects/sources/ip_cores/project_mips_ip/project_mips_ip.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1becd437_ARCHIVE_LOCATION">c:/Users/brehm/Dropbox/Vivado_Projects/sources/ip_cores/project_mips_ip/project_mips_ip.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@42b35207_ARCHIVE_LOCATION">c:/Users/brehm/Dropbox/Vivado_Projects/sources/ip_cores/project_mips_ip/project_mips_ip.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1568db12_ARCHIVE_LOCATION">c:/Users/brehm/Dropbox/Vivado_Projects/sources/ip_cores/project_mips_ip/project_mips_ip.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@b0e19af_ARCHIVE_LOCATION">c:/Users/brehm/Dropbox/Vivado_Projects/sources/ip_cores/project_mips_ip/project_mips_ip.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@33b5fbbd_ARCHIVE_LOCATION">c:/Users/brehm/Dropbox/Vivado_Projects/sources/ip_cores/project_mips_ip/project_mips_ip.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@300cf389_ARCHIVE_LOCATION">c:/Users/brehm/Dropbox/Vivado_Projects/sources/ip_cores/project_mips_ip/project_mips_ip.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@71e290ba_ARCHIVE_LOCATION">c:/Users/brehm/Dropbox/Vivado_Projects/sources/ip_cores/project_mips_ip/project_mips_ip.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3c6c40bf_ARCHIVE_LOCATION">c:/Users/brehm/Dropbox/Vivado_Projects/sources/ip_cores/project_mips_ip/project_mips_ip.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@51924515_ARCHIVE_LOCATION">c:/Users/brehm/Dropbox/Vivado_Projects/sources/ip_cores/project_mips_ip/project_mips_ip.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@309a1a5e_ARCHIVE_LOCATION">c:/Users/brehm/Dropbox/Vivado_Projects/sources/ip_cores/project_mips_ip/project_mips_ip.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1389e09d_ARCHIVE_LOCATION">c:/Users/brehm/Dropbox/Vivado_Projects/sources/ip_cores/project_mips_ip/project_mips_ip.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@39858603_ARCHIVE_LOCATION">c:/Users/brehm/Dropbox/Vivado_Projects/sources/ip_cores/project_mips_ip/project_mips_ip.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6078f942_ARCHIVE_LOCATION">c:/Users/brehm/Dropbox/Vivado_Projects/sources/ip_cores/project_mips_ip/project_mips_ip.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@645b33dd_ARCHIVE_LOCATION">c:/Users/brehm/Dropbox/Vivado_Projects/sources/ip_cores/project_mips_ip/project_mips_ip.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@433271ab_ARCHIVE_LOCATION">c:/Users/brehm/Dropbox/Vivado_Projects/sources/ip_cores/project_mips_ip/project_mips_ip.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@213a35dc_ARCHIVE_LOCATION">c:/Users/brehm/Dropbox/Vivado_Projects/sources/ip_cores/project_mips_ip/project_mips_ip.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1b0f3fa5_ARCHIVE_LOCATION">c:/Users/brehm/Dropbox/Vivado_Projects/sources/ip_cores/project_mips_ip/project_mips_ip.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@75eba545_ARCHIVE_LOCATION">c:/Users/brehm/Dropbox/Vivado_Projects/sources/ip_cores/project_mips_ip/project_mips_ip.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5ab961ae_ARCHIVE_LOCATION">c:/Users/brehm/Dropbox/Vivado_Projects/sources/ip_cores/project_mips_ip/project_mips_ip.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@42404300_ARCHIVE_LOCATION">c:/Users/brehm/Dropbox/Vivado_Projects/sources/ip_cores/project_mips_ip/project_mips_ip.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@bbd89fc_ARCHIVE_LOCATION">c:/Users/brehm/Dropbox/Vivado_Projects/sources/ip_cores/project_mips_ip/project_mips_ip.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@40eece16_ARCHIVE_LOCATION">c:/Users/brehm/Dropbox/Vivado_Projects/sources/ip_cores/project_mips_ip/project_mips_ip.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@a8149e9_ARCHIVE_LOCATION">c:/Users/brehm/Dropbox/Vivado_Projects/sources/ip_cores/project_mips_ip/project_mips_ip.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5b0c3983_ARCHIVE_LOCATION">c:/Users/brehm/Dropbox/Vivado_Projects/sources/ip_cores/project_mips_ip/project_mips_ip.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4c002575_ARCHIVE_LOCATION">c:/Users/brehm/Dropbox/Vivado_Projects/sources/ip_cores/project_mips_ip/project_mips_ip.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@a6a9b11_ARCHIVE_LOCATION">c:/Users/brehm/Dropbox/Vivado_Projects/sources/ip_cores/project_mips_ip/project_mips_ip.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@55209edb_ARCHIVE_LOCATION">c:/Users/brehm/Dropbox/Vivado_Projects/sources/ip_cores/project_mips_ip/project_mips_ip.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3558cf87_ARCHIVE_LOCATION">c:/Users/brehm/Dropbox/Vivado_Projects/sources/ip_cores/project_mips_ip/project_mips_ip.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@26fc0ea9_ARCHIVE_LOCATION">c:/Users/brehm/Dropbox/Vivado_Projects/sources/ip_cores/project_mips_ip/project_mips_ip.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@45d437d9_ARCHIVE_LOCATION">c:/Users/brehm/Dropbox/Vivado_Projects/sources/ip_cores/project_mips_ip/project_mips_ip.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4d5e222d_ARCHIVE_LOCATION">c:/Users/brehm/Dropbox/Vivado_Projects/sources/ip_cores/project_mips_ip/project_mips_ip.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5cca85d8_ARCHIVE_LOCATION">c:/Users/brehm/Dropbox/Vivado_Projects/sources/ip_cores/project_mips_ip/project_mips_ip.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@61b4a3b4_ARCHIVE_LOCATION">c:/Users/brehm/Dropbox/Vivado_Projects/sources/ip_cores/project_mips_ip/project_mips_ip.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4a3b2c38_ARCHIVE_LOCATION">c:/Users/brehm/Dropbox/Vivado_Projects/sources/ip_cores/project_mips_ip/project_mips_ip.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7db9c95e_ARCHIVE_LOCATION">c:/Users/brehm/Dropbox/Vivado_Projects/sources/ip_cores/project_mips_ip/project_mips_ip.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@758a2cb5_ARCHIVE_LOCATION">c:/Users/brehm/Dropbox/Vivado_Projects/sources/ip_cores/project_mips_ip/project_mips_ip.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2fabbdcf_ARCHIVE_LOCATION">c:/Users/brehm/Dropbox/Vivado_Projects/sources/ip_cores/project_mips_ip/project_mips_ip.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@39a4b4b0_ARCHIVE_LOCATION">c:/Users/brehm/Dropbox/Vivado_Projects/sources/ip_cores/project_mips_ip/project_mips_ip.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@e92b334_ARCHIVE_LOCATION">c:/Users/brehm/Dropbox/Vivado_Projects/sources/ip_cores/project_mips_ip/project_mips_ip.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1c448d39_ARCHIVE_LOCATION">c:/Users/brehm/Dropbox/Vivado_Projects/sources/ip_cores/project_mips_ip/project_mips_ip.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6f44e97d_ARCHIVE_LOCATION">c:/Users/brehm/Dropbox/Vivado_Projects/sources/ip_cores/project_mips_ip/project_mips_ip.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@732e50fe_ARCHIVE_LOCATION">c:/Users/brehm/Dropbox/Vivado_Projects/sources/ip_cores/project_mips_ip/project_mips_ip.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4399aa50_ARCHIVE_LOCATION">c:/Users/brehm/Dropbox/Vivado_Projects/sources/ip_cores/project_mips_ip/project_mips_ip.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4a77d943_ARCHIVE_LOCATION">c:/Users/brehm/Dropbox/Vivado_Projects/sources/ip_cores/project_mips_ip/project_mips_ip.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6a12bc9e_ARCHIVE_LOCATION">c:/Users/brehm/Dropbox/Vivado_Projects/sources/ip_cores/project_mips_ip/project_mips_ip.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@29aad6b6_ARCHIVE_LOCATION">c:/Users/brehm/Dropbox/Vivado_Projects/sources/ip_cores/project_mips_ip/project_mips_ip.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@69a00f29_ARCHIVE_LOCATION">c:/Users/brehm/Dropbox/Vivado_Projects/sources/ip_cores/project_mips_ip/project_mips_ip.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6a95c53f_ARCHIVE_LOCATION">c:/Users/brehm/Dropbox/Vivado_Projects/sources/ip_cores/project_mips_ip/project_mips_ip.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2530edab_ARCHIVE_LOCATION">c:/Users/brehm/Dropbox/Vivado_Projects/sources/ip_cores/project_mips_ip/project_mips_ip.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@38cb51fa_ARCHIVE_LOCATION">c:/Users/brehm/Dropbox/Vivado_Projects/sources/ip_cores/project_mips_ip/project_mips_ip.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2323b525_ARCHIVE_LOCATION">c:/Users/brehm/Dropbox/Vivado_Projects/sources/ip_cores/project_mips_ip/project_mips_ip.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@79b879a2_ARCHIVE_LOCATION">c:/Users/brehm/Dropbox/Vivado_Projects/sources/ip_cores/project_mips_ip/project_mips_ip.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@326a66b7_ARCHIVE_LOCATION">c:/Users/brehm/Dropbox/Vivado_Projects/sources/ip_cores/project_mips_ip/project_mips_ip.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@477a09dc_ARCHIVE_LOCATION">c:/Users/brehm/Dropbox/Vivado_Projects/sources/ip_cores/project_mips_ip/project_mips_ip.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6d33e4a2_ARCHIVE_LOCATION">c:/Users/brehm/Dropbox/Vivado_Projects/sources/ip_cores/project_mips_ip/project_mips_ip.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4d1ba9ca_ARCHIVE_LOCATION">c:/Users/brehm/Dropbox/Vivado_Projects/sources/ip_cores/project_mips_ip/project_mips_ip.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@47432fdd_ARCHIVE_LOCATION">c:/Users/brehm/Dropbox/Vivado_Projects/sources/ip_cores/project_mips_ip/project_mips_ip.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1145c351_ARCHIVE_LOCATION">c:/Users/brehm/Dropbox/Vivado_Projects/sources/ip_cores/project_mips_ip/project_mips_ip.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3b364efc_ARCHIVE_LOCATION">c:/Users/brehm/Dropbox/Vivado_Projects/sources/ip_cores/project_mips_ip/project_mips_ip.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@84d7aa9_ARCHIVE_LOCATION">c:/Users/brehm/Dropbox/Vivado_Projects/sources/ip_cores/project_mips_ip/project_mips_ip.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6cdff31b_ARCHIVE_LOCATION">c:/Users/brehm/Dropbox/Vivado_Projects/sources/ip_cores/project_mips_ip/project_mips_ip.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7d0122dd_ARCHIVE_LOCATION">c:/Users/brehm/Dropbox/Vivado_Projects/sources/ip_cores/project_mips_ip/project_mips_ip.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@584cbbb4_ARCHIVE_LOCATION">c:/Users/brehm/Dropbox/Vivado_Projects/sources/ip_cores/project_mips_ip/project_mips_ip.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@366dcbe4_ARCHIVE_LOCATION">c:/Users/brehm/Dropbox/Vivado_Projects/sources/ip_cores/project_mips_ip/project_mips_ip.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6c2d0b7f_ARCHIVE_LOCATION">c:/Users/brehm/Dropbox/Vivado_Projects/sources/ip_cores/project_mips_ip/project_mips_ip.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@d92a425_ARCHIVE_LOCATION">c:/Users/brehm/Dropbox/Vivado_Projects/sources/ip_cores/project_mips_ip/project_mips_ip.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4170dc0c_ARCHIVE_LOCATION">c:/Users/brehm/Dropbox/Vivado_Projects/sources/ip_cores/project_mips_ip/project_mips_ip.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@983194_ARCHIVE_LOCATION">c:/Users/brehm/Dropbox/Vivado_Projects/sources/ip_cores/project_mips_ip/project_mips_ip.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@9dbd283_ARCHIVE_LOCATION">c:/Users/brehm/Dropbox/Vivado_Projects/sources/ip_cores/project_mips_ip/project_mips_ip.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3ffb0127_ARCHIVE_LOCATION">c:/Users/brehm/Dropbox/Vivado_Projects/sources/ip_cores/project_mips_ip/project_mips_ip.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5e968c33_ARCHIVE_LOCATION">c:/Users/brehm/Dropbox/Vivado_Projects/sources/ip_cores/project_mips_ip/project_mips_ip.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7719c23b_ARCHIVE_LOCATION">c:/Users/brehm/Dropbox/Vivado_Projects/sources/ip_cores/project_mips_ip/project_mips_ip.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@49995313_ARCHIVE_LOCATION">c:/Users/brehm/Dropbox/Vivado_Projects/sources/ip_cores/project_mips_ip/project_mips_ip.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@479c7616_ARCHIVE_LOCATION">c:/Users/brehm/Dropbox/Vivado_Projects/sources/ip_cores/project_mips_ip/project_mips_ip.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@70f0477b_ARCHIVE_LOCATION">c:/Users/brehm/Dropbox/Vivado_Projects/sources/ip_cores/project_mips_ip/project_mips_ip.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7812d9ac_ARCHIVE_LOCATION">c:/Users/brehm/Dropbox/Vivado_Projects/sources/ip_cores/project_mips_ip/project_mips_ip.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@678332ec_ARCHIVE_LOCATION">c:/Users/brehm/Dropbox/Vivado_Projects/sources/ip_cores/project_mips_ip/project_mips_ip.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@63a9837f_ARCHIVE_LOCATION">c:/Users/brehm/Dropbox/Vivado_Projects/sources/ip_cores/project_mips_ip/project_mips_ip.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@66719930_ARCHIVE_LOCATION">c:/Users/brehm/Dropbox/Vivado_Projects/sources/ip_cores/project_mips_ip/project_mips_ip.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2c6686a1_ARCHIVE_LOCATION">c:/Users/brehm/Dropbox/Vivado_Projects/sources/ip_cores/project_mips_ip/project_mips_ip.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7947fba8_ARCHIVE_LOCATION">c:/Users/brehm/Dropbox/Vivado_Projects/sources/ip_cores/project_mips_ip/project_mips_ip.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1a81b465_ARCHIVE_LOCATION">c:/Users/brehm/Dropbox/Vivado_Projects/sources/ip_cores/project_mips_ip/project_mips_ip.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4bdbbb01_ARCHIVE_LOCATION">c:/Users/brehm/Dropbox/Vivado_Projects/sources/ip_cores/project_mips_ip/project_mips_ip.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@75b50131_ARCHIVE_LOCATION">c:/Users/brehm/Dropbox/Vivado_Projects/sources/ip_cores/project_mips_ip/project_mips_ip.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@260d89ec_ARCHIVE_LOCATION">c:/Users/brehm/Dropbox/Vivado_Projects/sources/ip_cores/project_mips_ip/project_mips_ip.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@66c2fa46_ARCHIVE_LOCATION">c:/Users/brehm/Dropbox/Vivado_Projects/sources/ip_cores/project_mips_ip/project_mips_ip.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@632492_ARCHIVE_LOCATION">c:/Users/brehm/Dropbox/Vivado_Projects/sources/ip_cores/project_mips_ip/project_mips_ip.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7ddbe08a_ARCHIVE_LOCATION">c:/Users/brehm/Dropbox/Vivado_Projects/sources/ip_cores/project_mips_ip/project_mips_ip.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7e8c54b1_ARCHIVE_LOCATION">c:/Users/brehm/Dropbox/Vivado_Projects/sources/ip_cores/project_mips_ip/project_mips_ip.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@19f45aa8_ARCHIVE_LOCATION">c:/Users/brehm/Dropbox/Vivado_Projects/sources/ip_cores/project_mips_ip/project_mips_ip.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2bed3475_ARCHIVE_LOCATION">c:/Users/brehm/Dropbox/Vivado_Projects/sources/ip_cores/project_mips_ip/project_mips_ip.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@49a2249e_ARCHIVE_LOCATION">c:/Users/brehm/Dropbox/Vivado_Projects/sources/ip_cores/project_mips_ip/project_mips_ip.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@649e8f58_ARCHIVE_LOCATION">c:/Users/brehm/Dropbox/Vivado_Projects/sources/ip_cores/project_mips_ip/project_mips_ip.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4dd3ef51_ARCHIVE_LOCATION">c:/Users/brehm/Dropbox/Vivado_Projects/sources/ip_cores/project_mips_ip/project_mips_ip.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@504c2fb2_ARCHIVE_LOCATION">c:/Users/brehm/Dropbox/Vivado_Projects/sources/ip_cores/project_mips_ip/project_mips_ip.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@c62e385_ARCHIVE_LOCATION">c:/Users/brehm/Dropbox/Vivado_Projects/sources/ip_cores/project_mips_ip/project_mips_ip.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@36fcb98a_ARCHIVE_LOCATION">c:/Users/brehm/Dropbox/Vivado_Projects/sources/ip_cores/project_mips_ip/project_mips_ip.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6fa281f_ARCHIVE_LOCATION">c:/Users/brehm/Dropbox/Vivado_Projects/sources/ip_cores/project_mips_ip/project_mips_ip.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5fb46810_ARCHIVE_LOCATION">c:/Users/brehm/Dropbox/Vivado_Projects/sources/ip_cores/project_mips_ip/project_mips_ip.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@72b0fb8b_ARCHIVE_LOCATION">c:/Users/brehm/Dropbox/Vivado_Projects/sources/ip_cores/project_mips_ip/project_mips_ip.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@56bf1a8c_ARCHIVE_LOCATION">c:/Users/brehm/Dropbox/Vivado_Projects/sources/ip_cores/project_mips_ip/project_mips_ip.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6507ba78_ARCHIVE_LOCATION">c:/Users/brehm/Dropbox/Vivado_Projects/sources/ip_cores/project_mips_ip/project_mips_ip.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@738c443f_ARCHIVE_LOCATION">c:/Users/brehm/Dropbox/Vivado_Projects/sources/ip_cores/project_mips_ip/project_mips_ip.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@73fab1e1_ARCHIVE_LOCATION">c:/Users/brehm/Dropbox/Vivado_Projects/sources/ip_cores/project_mips_ip/project_mips_ip.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6c0d2a51_ARCHIVE_LOCATION">c:/Users/brehm/Dropbox/Vivado_Projects/sources/ip_cores/project_mips_ip/project_mips_ip.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@136e50ce_ARCHIVE_LOCATION">c:/Users/brehm/Dropbox/Vivado_Projects/sources/ip_cores/project_mips_ip/project_mips_ip.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7c49c15_ARCHIVE_LOCATION">c:/Users/brehm/Dropbox/Vivado_Projects/sources/ip_cores/project_mips_ip/project_mips_ip.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1f52dd7_ARCHIVE_LOCATION">c:/Users/brehm/Dropbox/Vivado_Projects/sources/ip_cores/project_mips_ip/project_mips_ip.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6cfac24_ARCHIVE_LOCATION">c:/Users/brehm/Dropbox/Vivado_Projects/sources/ip_cores/project_mips_ip/project_mips_ip.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@33de8f12_ARCHIVE_LOCATION">c:/Users/brehm/Dropbox/Vivado_Projects/sources/ip_cores/project_mips_ip/project_mips_ip.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2ded21ef_ARCHIVE_LOCATION">c:/Users/brehm/Dropbox/Vivado_Projects/sources/ip_cores/project_mips_ip/project_mips_ip.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@12fe23c7_ARCHIVE_LOCATION">c:/Users/brehm/Dropbox/Vivado_Projects/sources/ip_cores/project_mips_ip/project_mips_ip.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@cc99356_ARCHIVE_LOCATION">c:/Users/brehm/Dropbox/Vivado_Projects/sources/ip_cores/project_mips_ip/project_mips_ip.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@131c16e4_ARCHIVE_LOCATION">c:/Users/brehm/Dropbox/Vivado_Projects/sources/ip_cores/project_mips_ip/project_mips_ip.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2ebfc1da_ARCHIVE_LOCATION">c:/Users/brehm/Dropbox/Vivado_Projects/sources/ip_cores/project_mips_ip/project_mips_ip.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@e02656_ARCHIVE_LOCATION">c:/Users/brehm/Dropbox/Vivado_Projects/sources/ip_cores/project_mips_ip/project_mips_ip.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@328ec994_ARCHIVE_LOCATION">c:/Users/brehm/Dropbox/Vivado_Projects/sources/ip_cores/project_mips_ip/project_mips_ip.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1f5e0072_ARCHIVE_LOCATION">c:/Users/brehm/Dropbox/Vivado_Projects/sources/ip_cores/project_mips_ip/project_mips_ip.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2b193124_ARCHIVE_LOCATION">c:/Users/brehm/Dropbox/Vivado_Projects/sources/ip_cores/project_mips_ip/project_mips_ip.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@209c167d_ARCHIVE_LOCATION">c:/Users/brehm/Dropbox/Vivado_Projects/sources/ip_cores/project_mips_ip/project_mips_ip.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@126d91a3_ARCHIVE_LOCATION">c:/Users/brehm/Dropbox/Vivado_Projects/sources/ip_cores/project_mips_ip/project_mips_ip.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7c3a01af_ARCHIVE_LOCATION">c:/Users/brehm/Dropbox/Vivado_Projects/sources/ip_cores/project_mips_ip/project_mips_ip.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3088a0b0_ARCHIVE_LOCATION">c:/Users/brehm/Dropbox/Vivado_Projects/sources/ip_cores/project_mips_ip/project_mips_ip.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@45799d45_ARCHIVE_LOCATION">c:/Users/brehm/Dropbox/Vivado_Projects/sources/ip_cores/project_mips_ip/project_mips_ip.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@11ee348f_ARCHIVE_LOCATION">c:/Users/brehm/Dropbox/Vivado_Projects/sources/ip_cores/project_mips_ip/project_mips_ip.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@a2eac51_ARCHIVE_LOCATION">c:/Users/brehm/Dropbox/Vivado_Projects/sources/ip_cores/project_mips_ip/project_mips_ip.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@405d8812_ARCHIVE_LOCATION">c:/Users/brehm/Dropbox/Vivado_Projects/sources/ip_cores/project_mips_ip/project_mips_ip.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@290d7069_ARCHIVE_LOCATION">c:/Users/brehm/Dropbox/Vivado_Projects/sources/ip_cores/project_mips_ip/project_mips_ip.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3c55af4d_ARCHIVE_LOCATION">c:/Users/brehm/Dropbox/Vivado_Projects/sources/ip_cores/project_mips_ip/project_mips_ip.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5840168a_ARCHIVE_LOCATION">c:/Users/brehm/Dropbox/Vivado_Projects/sources/ip_cores/project_mips_ip/project_mips_ip.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@15d64322_ARCHIVE_LOCATION">c:/Users/brehm/Dropbox/Vivado_Projects/sources/ip_cores/project_mips_ip/project_mips_ip.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@45c153e0_ARCHIVE_LOCATION">c:/Users/brehm/Dropbox/Vivado_Projects/sources/ip_cores/project_mips_ip/project_mips_ip.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@c23713c_ARCHIVE_LOCATION">c:/Users/brehm/Dropbox/Vivado_Projects/sources/ip_cores/project_mips_ip/project_mips_ip.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1f241362_ARCHIVE_LOCATION">c:/Users/brehm/Dropbox/Vivado_Projects/sources/ip_cores/project_mips_ip/project_mips_ip.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5b8568b4_ARCHIVE_LOCATION">c:/Users/brehm/Dropbox/Vivado_Projects/sources/ip_cores/project_mips_ip/project_mips_ip.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@742b79fb_ARCHIVE_LOCATION">c:/Users/brehm/Dropbox/Vivado_Projects/sources/ip_cores/project_mips_ip/project_mips_ip.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3c54ec7_ARCHIVE_LOCATION">c:/Users/brehm/Dropbox/Vivado_Projects/sources/ip_cores/project_mips_ip/project_mips_ip.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2fa3617c_ARCHIVE_LOCATION">c:/Users/brehm/Dropbox/Vivado_Projects/sources/ip_cores/project_mips_ip/project_mips_ip.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6358b77c_ARCHIVE_LOCATION">c:/Users/brehm/Dropbox/Vivado_Projects/sources/ip_cores/project_mips_ip/project_mips_ip.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1a2480f8_ARCHIVE_LOCATION">c:/Users/brehm/Dropbox/Vivado_Projects/sources/ip_cores/project_mips_ip/project_mips_ip.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6ae9b904_ARCHIVE_LOCATION">c:/Users/brehm/Dropbox/Vivado_Projects/sources/ip_cores/project_mips_ip/project_mips_ip.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4fce32e6_ARCHIVE_LOCATION">c:/Users/brehm/Dropbox/Vivado_Projects/sources/ip_cores/project_mips_ip/project_mips_ip.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3ca9bb3f_ARCHIVE_LOCATION">c:/Users/brehm/Dropbox/Vivado_Projects/sources/ip_cores/project_mips_ip/project_mips_ip.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@241f48a3_ARCHIVE_LOCATION">c:/Users/brehm/Dropbox/Vivado_Projects/sources/ip_cores/project_mips_ip/project_mips_ip.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@147081c7_ARCHIVE_LOCATION">c:/Users/brehm/Dropbox/Vivado_Projects/sources/ip_cores/project_mips_ip/project_mips_ip.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2be3471d_ARCHIVE_LOCATION">c:/Users/brehm/Dropbox/Vivado_Projects/sources/ip_cores/project_mips_ip/project_mips_ip.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@9fa3957_ARCHIVE_LOCATION">c:/Users/brehm/Dropbox/Vivado_Projects/sources/ip_cores/project_mips_ip/project_mips_ip.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4e2cd551_ARCHIVE_LOCATION">c:/Users/brehm/Dropbox/Vivado_Projects/sources/ip_cores/project_mips_ip/project_mips_ip.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@51c78374_ARCHIVE_LOCATION">c:/Users/brehm/Dropbox/Vivado_Projects/sources/ip_cores/project_mips_ip/project_mips_ip.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@137d35ab_ARCHIVE_LOCATION">c:/Users/brehm/Dropbox/Vivado_Projects/sources/ip_cores/project_mips_ip/project_mips_ip.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1768aab3_ARCHIVE_LOCATION">c:/Users/brehm/Dropbox/Vivado_Projects/sources/ip_cores/project_mips_ip/project_mips_ip.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@128b245d_ARCHIVE_LOCATION">c:/Users/brehm/Dropbox/Vivado_Projects/sources/ip_cores/project_mips_ip/project_mips_ip.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1c85e336_ARCHIVE_LOCATION">c:/Users/brehm/Dropbox/Vivado_Projects/sources/ip_cores/project_mips_ip/project_mips_ip.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@71ea3ca_ARCHIVE_LOCATION">c:/Users/brehm/Dropbox/Vivado_Projects/sources/ip_cores/project_mips_ip/project_mips_ip.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@171c9104_ARCHIVE_LOCATION">c:/Users/brehm/Dropbox/Vivado_Projects/sources/ip_cores/project_mips_ip/project_mips_ip.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@670a904c_ARCHIVE_LOCATION">c:/Users/brehm/Dropbox/Vivado_Projects/sources/ip_cores/project_mips_ip/project_mips_ip.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3384b422_ARCHIVE_LOCATION">c:/Users/brehm/Dropbox/Vivado_Projects/sources/ip_cores/project_mips_ip/project_mips_ip.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2bd10a42_ARCHIVE_LOCATION">c:/Users/brehm/Dropbox/Vivado_Projects/sources/ip_cores/project_mips_ip/project_mips_ip.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1335210f_ARCHIVE_LOCATION">c:/Users/brehm/Dropbox/Vivado_Projects/sources/ip_cores/project_mips_ip/project_mips_ip.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6860ff68_ARCHIVE_LOCATION">c:/Users/brehm/Dropbox/Vivado_Projects/sources/ip_cores/project_mips_ip/project_mips_ip.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2881673a_ARCHIVE_LOCATION">c:/Users/brehm/Dropbox/Vivado_Projects/sources/ip_cores/project_mips_ip/project_mips_ip.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@687044c1_ARCHIVE_LOCATION">c:/Users/brehm/Dropbox/Vivado_Projects/sources/ip_cores/project_mips_ip/project_mips_ip.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1505aa81_ARCHIVE_LOCATION">c:/Users/brehm/Dropbox/Vivado_Projects/sources/ip_cores/project_mips_ip/project_mips_ip.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5015cdf4_ARCHIVE_LOCATION">c:/Users/brehm/Dropbox/Vivado_Projects/sources/ip_cores/project_mips_ip/project_mips_ip.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3772af70_ARCHIVE_LOCATION">c:/Users/brehm/Dropbox/Vivado_Projects/sources/ip_cores/project_mips_ip/project_mips_ip.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5784001a_ARCHIVE_LOCATION">c:/Users/brehm/Dropbox/Vivado_Projects/sources/ip_cores/project_mips_ip/project_mips_ip.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5a53_ARCHIVE_LOCATION">c:/Users/brehm/Dropbox/Vivado_Projects/sources/ip_cores/project_mips_ip/project_mips_ip.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4575a4c5_ARCHIVE_LOCATION">c:/Users/brehm/Dropbox/Vivado_Projects/sources/ip_cores/project_mips_ip/project_mips_ip.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@50e63242_ARCHIVE_LOCATION">c:/Users/brehm/Dropbox/Vivado_Projects/sources/ip_cores/project_mips_ip/project_mips_ip.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3866d3c7_ARCHIVE_LOCATION">c:/Users/brehm/Dropbox/Vivado_Projects/sources/ip_cores/project_mips_ip/project_mips_ip.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4ceddbdc_ARCHIVE_LOCATION">c:/Users/brehm/Dropbox/Vivado_Projects/sources/ip_cores/project_mips_ip/project_mips_ip.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@859a55e_ARCHIVE_LOCATION">c:/Users/brehm/Dropbox/Vivado_Projects/sources/ip_cores/project_mips_ip/project_mips_ip.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@67c9affd_ARCHIVE_LOCATION">c:/Users/brehm/Dropbox/Vivado_Projects/sources/ip_cores/project_mips_ip/project_mips_ip.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@ff273ae_ARCHIVE_LOCATION">c:/Users/brehm/Dropbox/Vivado_Projects/sources/ip_cores/project_mips_ip/project_mips_ip.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@46218e80_ARCHIVE_LOCATION">c:/Users/brehm/Dropbox/Vivado_Projects/sources/ip_cores/project_mips_ip/project_mips_ip.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@28e4b0fe_ARCHIVE_LOCATION">c:/Users/brehm/Dropbox/Vivado_Projects/sources/ip_cores/project_mips_ip/project_mips_ip.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@64fb4ac7_ARCHIVE_LOCATION">c:/Users/brehm/Dropbox/Vivado_Projects/sources/ip_cores/project_mips_ip/project_mips_ip.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@27823962_ARCHIVE_LOCATION">c:/Users/brehm/Dropbox/Vivado_Projects/sources/ip_cores/project_mips_ip/project_mips_ip.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@18d9dbb3_ARCHIVE_LOCATION">c:/Users/brehm/Dropbox/Vivado_Projects/sources/ip_cores/project_mips_ip/project_mips_ip.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@74bef221_ARCHIVE_LOCATION">c:/Users/brehm/Dropbox/Vivado_Projects/sources/ip_cores/project_mips_ip/project_mips_ip.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@a839dc7_ARCHIVE_LOCATION">c:/Users/brehm/Dropbox/Vivado_Projects/sources/ip_cores/project_mips_ip/project_mips_ip.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@393fe173_ARCHIVE_LOCATION">c:/Users/brehm/Documents/repos/hscod/ip_cores/project_mips_ip/project_mips_ip.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@125c2567_ARCHIVE_LOCATION">c:/Users/brehm/Documents/repos/hscod/ip_cores/project_mips_ip/project_mips_ip.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@c70bb92_ARCHIVE_LOCATION">c:/Users/brehm/Documents/repos/hscod/ip_cores/project_mips_ip/project_mips_ip.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5234ed94_ARCHIVE_LOCATION">c:/Users/brehm/Documents/repos/hscod/ip_cores/project_mips_ip/project_mips_ip.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@11206b10_ARCHIVE_LOCATION">c:/Users/brehm/Documents/repos/hscod/ip_cores/project_mips_ip/project_mips_ip.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5bbda3e8_ARCHIVE_LOCATION">c:/Users/brehm/Documents/repos/hscod/ip_cores/project_mips_ip/project_mips_ip.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5bf4b258_ARCHIVE_LOCATION">c:/Users/brehm/Documents/repos/hscod/ip_cores/project_mips_ip/project_mips_ip.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@38b26a29_ARCHIVE_LOCATION">c:/Users/brehm/Documents/repos/hscod/ip_cores/project_mips_ip/project_mips_ip.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6b4097eb_ARCHIVE_LOCATION">c:/Users/brehm/Documents/repos/hscod/ip_cores/project_mips_ip/project_mips_ip.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7cdacc68_ARCHIVE_LOCATION">c:/Users/brehm/Documents/repos/hscod/ip_cores/project_mips_ip/project_mips_ip.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@764fcb25_ARCHIVE_LOCATION">c:/Users/brehm/Documents/repos/hscod/ip_cores/project_mips_ip/project_mips_ip.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3382081a_ARCHIVE_LOCATION">c:/Users/brehm/Documents/repos/hscod/ip_cores/project_mips_ip/project_mips_ip.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@55f8b9fe_ARCHIVE_LOCATION">c:/Users/brehm/Documents/repos/hscod/ip_cores/project_mips_ip/project_mips_ip.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4bade4c6_ARCHIVE_LOCATION">c:/Users/brehm/Documents/repos/hscod/ip_cores/project_mips_ip/project_mips_ip.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4fee9e0c_ARCHIVE_LOCATION">c:/Users/brehm/Documents/repos/hscod/ip_cores/project_mips_ip/project_mips_ip.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@46d2832c_ARCHIVE_LOCATION">c:/Users/brehm/Documents/repos/hscod/ip_cores/project_mips_ip/project_mips_ip.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2bff533b_ARCHIVE_LOCATION">c:/Users/brehm/Documents/repos/hscod/ip_cores/project_mips_ip/project_mips_ip.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@685345eb_ARCHIVE_LOCATION">c:/Users/brehm/Documents/repos/hscod/ip_cores/project_mips_ip/project_mips_ip.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@35a76152_ARCHIVE_LOCATION">c:/Users/brehm/Documents/repos/hscod/ip_cores/project_mips_ip/project_mips_ip.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@77916080_ARCHIVE_LOCATION">c:/Users/brehm/Documents/repos/hscod/ip_cores/project_mips_ip/project_mips_ip.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5de40d5d_ARCHIVE_LOCATION">c:/Users/brehm/Documents/repos/hscod/ip_cores/project_mips_ip/project_mips_ip.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@490c6a20_ARCHIVE_LOCATION">c:/Users/brehm/Documents/repos/hscod/ip_cores/project_mips_ip/project_mips_ip.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4df67d4f_ARCHIVE_LOCATION">c:/Users/brehm/Documents/repos/hscod/ip_cores/project_mips_ip/project_mips_ip.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@19672190_ARCHIVE_LOCATION">c:/Users/brehm/Documents/repos/hscod/ip_cores/project_mips_ip/project_mips_ip.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@19001cb9_ARCHIVE_LOCATION">c:/Users/brehm/Documents/repos/hscod/ip_cores/project_mips_ip/project_mips_ip.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6feb552d_ARCHIVE_LOCATION">c:/Users/brehm/Documents/repos/hscod/ip_cores/project_mips_ip/project_mips_ip.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@512c661d_ARCHIVE_LOCATION">c:/Users/brehm/Documents/repos/hscod/ip_cores/project_mips_ip/project_mips_ip.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@363ab79_ARCHIVE_LOCATION">c:/Users/brehm/Documents/repos/hscod/ip_cores/project_mips_ip/project_mips_ip.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6a0fe68f_ARCHIVE_LOCATION">c:/Users/brehm/Documents/repos/hscod/ip_cores/project_mips_ip/project_mips_ip.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@10976618_ARCHIVE_LOCATION">c:/Users/brehm/Documents/repos/hscod/ip_cores/project_mips_ip/project_mips_ip.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@86aa83c_ARCHIVE_LOCATION">c:/Users/brehm/Documents/repos/hscod/ip_cores/project_mips_ip/project_mips_ip.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3563a31a_ARCHIVE_LOCATION">c:/Users/brehm/Documents/repos/hscod/ip_cores/project_mips_ip/project_mips_ip.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2603f387_ARCHIVE_LOCATION">c:/Users/brehm/Documents/repos/hscod/ip_cores/project_mips_ip/project_mips_ip.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@534aeb5e_ARCHIVE_LOCATION">c:/Users/brehm/Documents/repos/hscod/ip_cores/project_mips_ip/project_mips_ip.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@78dc1d29_ARCHIVE_LOCATION">c:/Users/brehm/Documents/repos/hscod/ip_cores/project_mips_ip/project_mips_ip.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3ebd899_ARCHIVE_LOCATION">c:/Users/brehm/Documents/repos/hscod/ip_cores/project_mips_ip/project_mips_ip.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@27bfd547_ARCHIVE_LOCATION">c:/Users/brehm/Documents/repos/hscod/ip_cores/project_mips_ip/project_mips_ip.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2e89eec2_ARCHIVE_LOCATION">c:/Users/brehm/Documents/repos/hscod/ip_cores/project_mips_ip/project_mips_ip.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@bdd52c5_ARCHIVE_LOCATION">c:/Users/brehm/Documents/repos/hscod/ip_cores/project_mips_ip/project_mips_ip.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6890ba62_ARCHIVE_LOCATION">c:/Users/brehm/Documents/repos/hscod/ip_cores/project_mips_ip/project_mips_ip.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1eb4ec0b_ARCHIVE_LOCATION">c:/Users/brehm/Documents/repos/hscod/ip_cores/project_mips_ip/project_mips_ip.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2753d95f_ARCHIVE_LOCATION">c:/Users/brehm/Documents/repos/hscod/ip_cores/project_mips_ip/project_mips_ip.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@23d6eddf_ARCHIVE_LOCATION">c:/Users/brehm/Documents/repos/hscod/ip_cores/project_mips_ip/project_mips_ip.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7a98e5e2_ARCHIVE_LOCATION">c:/Users/brehm/Documents/repos/hscod/ip_cores/project_mips_ip/project_mips_ip.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5f19026f_ARCHIVE_LOCATION">c:/Users/brehm/Documents/repos/hscod/ip_cores/project_mips_ip/project_mips_ip.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@14e1783_ARCHIVE_LOCATION">c:/Users/brehm/Documents/repos/hscod/ip_cores/project_mips_ip/project_mips_ip.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2bc75460_ARCHIVE_LOCATION">c:/Users/brehm/Documents/repos/hscod/ip_cores/project_mips_ip/project_mips_ip.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@a447b92_ARCHIVE_LOCATION">c:/Users/brehm/Documents/repos/hscod/ip_cores/project_mips_ip/project_mips_ip.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4fceeef5_ARCHIVE_LOCATION">c:/Users/brehm/Documents/repos/hscod/ip_cores/project_mips_ip/project_mips_ip.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@ce68295_ARCHIVE_LOCATION">c:/Users/brehm/Documents/repos/hscod/ip_cores/project_mips_ip/project_mips_ip.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3b530110_ARCHIVE_LOCATION">c:/Users/brehm/Documents/repos/hscod/ip_cores/project_mips_ip/project_mips_ip.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7f41663e_ARCHIVE_LOCATION">c:/Users/brehm/Documents/repos/hscod/ip_cores/project_mips_ip/project_mips_ip.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3cbefbdb_ARCHIVE_LOCATION">c:/Users/brehm/Documents/repos/hscod/ip_cores/project_mips_ip/project_mips_ip.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@482fbdce_ARCHIVE_LOCATION">c:/Users/brehm/Documents/repos/hscod/ip_cores/project_mips_ip/project_mips_ip.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@63c940fb_ARCHIVE_LOCATION">c:/Users/brehm/Documents/repos/hscod/ip_cores/project_mips_ip/project_mips_ip.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@15f66312_ARCHIVE_LOCATION">c:/Users/brehm/Documents/repos/hscod/ip_cores/project_mips_ip/project_mips_ip.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@741e4763_ARCHIVE_LOCATION">c:/Users/brehm/Documents/repos/hscod/ip_cores/project_mips_ip/project_mips_ip.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4081c4c6_ARCHIVE_LOCATION">c:/Users/brehm/Documents/repos/hscod/ip_cores/project_mips_ip/project_mips_ip.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@66ce72fe_ARCHIVE_LOCATION">c:/Users/brehm/Documents/repos/hscod/ip_cores/project_mips_ip/project_mips_ip.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1a8d7e2c_ARCHIVE_LOCATION">c:/Users/brehm/Documents/repos/hscod/ip_cores/project_mips_ip/project_mips_ip.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3443eb70_ARCHIVE_LOCATION">c:/Users/brehm/Documents/repos/hscod/ip_cores/project_mips_ip/project_mips_ip.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@429ed715_ARCHIVE_LOCATION">c:/Users/brehm/Documents/repos/hscod/ip_cores/project_mips_ip/project_mips_ip.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2de08799_ARCHIVE_LOCATION">c:/Users/brehm/Documents/repos/hscod/ip_cores/project_mips_ip/project_mips_ip.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@347a9630_ARCHIVE_LOCATION">c:/Users/brehm/Documents/repos/hscod/ip_cores/project_mips_ip/project_mips_ip.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@9eb8998_ARCHIVE_LOCATION">c:/Users/brehm/Documents/repos/hscod/ip_cores/project_mips_ip/project_mips_ip.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@77c3ccf6_ARCHIVE_LOCATION">c:/Users/brehm/Documents/repos/hscod/ip_cores/project_mips_ip/project_mips_ip.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@36273540_ARCHIVE_LOCATION">c:/Users/brehm/Documents/repos/hscod/ip_cores/project_mips_ip/project_mips_ip.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4c18b04f_ARCHIVE_LOCATION">c:/Users/brehm/Documents/repos/hscod/ip_cores/project_mips_ip/project_mips_ip.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@79b71787_ARCHIVE_LOCATION">c:/Users/brehm/Documents/repos/hscod/ip_cores/project_mips_ip/project_mips_ip.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@73abd275_ARCHIVE_LOCATION">c:/Users/brehm/Documents/repos/hscod/ip_cores/project_mips_ip/project_mips_ip.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@66d21f2c_ARCHIVE_LOCATION">c:/Users/brehm/Documents/repos/hscod/ip_cores/project_mips_ip/project_mips_ip.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4fff919c_ARCHIVE_LOCATION">c:/Users/brehm/Documents/repos/hscod/ip_cores/project_mips_ip/project_mips_ip.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@38a9dbbe_ARCHIVE_LOCATION">c:/Users/brehm/Documents/repos/hscod/ip_cores/project_mips_ip/project_mips_ip.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@65b2dec4_ARCHIVE_LOCATION">c:/Users/brehm/Documents/repos/hscod/ip_cores/project_mips_ip/project_mips_ip.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@427c1ced_ARCHIVE_LOCATION">c:/Users/brehm/Documents/repos/hscod/ip_cores/project_mips_ip/project_mips_ip.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2d3421d7_ARCHIVE_LOCATION">c:/Users/brehm/Documents/repos/hscod/ip_cores/project_mips_ip/project_mips_ip.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1b460820_ARCHIVE_LOCATION">c:/Users/brehm/Documents/repos/hscod/ip_cores/project_mips_ip/project_mips_ip.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@28b30692_ARCHIVE_LOCATION">c:/Users/brehm/Documents/repos/hscod/ip_cores/project_mips_ip/project_mips_ip.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@29c48f92_ARCHIVE_LOCATION">c:/Users/brehm/Documents/repos/hscod/ip_cores/project_mips_ip/project_mips_ip.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@61fea638_ARCHIVE_LOCATION">c:/Users/brehm/Documents/repos/hscod/ip_cores/project_mips_ip/project_mips_ip.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5d01aead_ARCHIVE_LOCATION">c:/Users/brehm/Documents/repos/hscod/ip_cores/project_mips_ip/project_mips_ip.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1fac846e_ARCHIVE_LOCATION">c:/Users/brehm/Documents/repos/hscod/ip_cores/project_mips_ip/project_mips_ip.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@29828a86_ARCHIVE_LOCATION">c:/Users/brehm/Documents/repos/hscod/ip_cores/project_mips_ip/project_mips_ip.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@40c9d194_ARCHIVE_LOCATION">c:/Users/brehm/Documents/repos/hscod/ip_cores/project_mips_ip/project_mips_ip.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4fc6e327_ARCHIVE_LOCATION">c:/Users/brehm/Documents/repos/hscod/ip_cores/project_mips_ip/project_mips_ip.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@12233a14_ARCHIVE_LOCATION">c:/Users/brehm/Documents/repos/hscod/ip_cores/project_mips_ip/project_mips_ip.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3e67f68c_ARCHIVE_LOCATION">c:/Users/brehm/Documents/repos/hscod/ip_cores/project_mips_ip/project_mips_ip.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@131baf6c_ARCHIVE_LOCATION">c:/Users/brehm/Documents/repos/hscod/ip_cores/project_mips_ip/project_mips_ip.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3b6db420_ARCHIVE_LOCATION">c:/Users/brehm/Documents/repos/hscod/ip_cores/project_mips_ip/project_mips_ip.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4662a37d_ARCHIVE_LOCATION">c:/Users/brehm/Documents/repos/hscod/ip_cores/project_mips_ip/project_mips_ip.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@564478fa_ARCHIVE_LOCATION">c:/Users/brehm/Documents/repos/hscod/ip_cores/project_mips_ip/project_mips_ip.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@371c6346_ARCHIVE_LOCATION">c:/Users/brehm/Documents/repos/hscod/ip_cores/project_mips_ip/project_mips_ip.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@60a2ab3e_ARCHIVE_LOCATION">c:/Users/brehm/Documents/repos/hscod/ip_cores/project_mips_ip/project_mips_ip.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3249df2_ARCHIVE_LOCATION">c:/Users/brehm/Documents/repos/hscod/ip_cores/project_mips_ip/project_mips_ip.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7ce6f47b_ARCHIVE_LOCATION">c:/Users/brehm/Documents/repos/hscod/ip_cores/project_mips_ip/project_mips_ip.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3ce6b677_ARCHIVE_LOCATION">c:/Users/brehm/Documents/repos/hscod/ip_cores/project_mips_ip/project_mips_ip.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2d6fdb5f_ARCHIVE_LOCATION">c:/Users/brehm/Documents/repos/hscod/ip_cores/project_mips_ip/project_mips_ip.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@398dd40d_ARCHIVE_LOCATION">c:/Users/brehm/Documents/repos/hscod/ip_cores/project_mips_ip/project_mips_ip.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7e38333e_ARCHIVE_LOCATION">c:/Users/brehm/Documents/repos/hscod/ip_cores/project_mips_ip/project_mips_ip.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2e45ad7b_ARCHIVE_LOCATION">c:/Users/brehm/Documents/repos/hscod/ip_cores/project_mips_ip/project_mips_ip.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@18499c21_ARCHIVE_LOCATION">c:/Users/brehm/Documents/repos/hscod/ip_cores/project_mips_ip/project_mips_ip.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@32be9af5_ARCHIVE_LOCATION">c:/Users/brehm/Downloads/project_mips_ip/project_mips_ip/project_mips_ip.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6365f868_ARCHIVE_LOCATION">c:/Users/brehm/Downloads/project_mips_ip/project_mips_ip/project_mips_ip.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@38561e2d_ARCHIVE_LOCATION">c:/Users/brehm/Downloads/project_mips_ip/project_mips_ip/project_mips_ip.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3271ea47_ARCHIVE_LOCATION">c:/Users/brehm/Downloads/project_mips_ip/project_mips_ip/project_mips_ip.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@32bf5c70_ARCHIVE_LOCATION">c:/Users/brehm/Downloads/project_mips_ip/project_mips_ip/project_mips_ip.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2fea0a26_ARCHIVE_LOCATION">c:/Users/brehm/Downloads/project_mips_ip/project_mips_ip/project_mips_ip.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@69847963_ARCHIVE_LOCATION">c:/Users/brehm/Downloads/project_mips_ip/project_mips_ip/project_mips_ip.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@9807c49_ARCHIVE_LOCATION">c:/Users/brehm/Downloads/project_mips_ip/project_mips_ip/project_mips_ip.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3c8c688f_ARCHIVE_LOCATION">c:/Users/brehm/Downloads/project_mips_ip/project_mips_ip/project_mips_ip.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@53adb383_ARCHIVE_LOCATION">c:/Users/brehm/Downloads/project_mips_ip/project_mips_ip/project_mips_ip.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2765c29c_ARCHIVE_LOCATION">c:/Users/brehm/Downloads/project_mips_ip/project_mips_ip/project_mips_ip.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7d4f8e7e_ARCHIVE_LOCATION">c:/Users/brehm/Downloads/project_mips_ip/project_mips_ip/project_mips_ip.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@20af250e_ARCHIVE_LOCATION">c:/Users/brehm/Downloads/project_mips_ip/project_mips_ip/project_mips_ip.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1d1e5c13_ARCHIVE_LOCATION">c:/Users/brehm/Downloads/project_mips_ip/project_mips_ip/project_mips_ip.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@466e4e5f_ARCHIVE_LOCATION">c:/Users/brehm/Downloads/project_mips_ip/project_mips_ip/project_mips_ip.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@259e7455_ARCHIVE_LOCATION">c:/Users/brehm/Downloads/project_mips_ip/project_mips_ip/project_mips_ip.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@466c3866_ARCHIVE_LOCATION">c:/Users/brehm/Downloads/project_mips_ip/project_mips_ip/project_mips_ip.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@22b0f6cd_ARCHIVE_LOCATION">c:/Users/brehm/Downloads/project_mips_ip/project_mips_ip/project_mips_ip.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@77c4a88d_ARCHIVE_LOCATION">c:/Users/brehm/Downloads/project_mips_ip/project_mips_ip/project_mips_ip.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6d73a668_ARCHIVE_LOCATION">c:/Users/brehm/Downloads/project_mips_ip/project_mips_ip/project_mips_ip.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@c932518_ARCHIVE_LOCATION">c:/Users/brehm/Downloads/project_mips_ip/project_mips_ip/project_mips_ip.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2d0aa028_ARCHIVE_LOCATION">c:/Users/brehm/Downloads/project_mips_ip/project_mips_ip/project_mips_ip.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@10983939_ARCHIVE_LOCATION">c:/Users/brehm/Downloads/project_mips_ip/project_mips_ip/project_mips_ip.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3c57510f_ARCHIVE_LOCATION">c:/Users/brehm/Downloads/project_mips_ip/project_mips_ip/project_mips_ip.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@32109780_ARCHIVE_LOCATION">c:/Users/brehm/Downloads/project_mips_ip/project_mips_ip/project_mips_ip.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4cbaffa2_ARCHIVE_LOCATION">c:/Users/brehm/Downloads/project_mips_ip/project_mips_ip/project_mips_ip.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7a660470_ARCHIVE_LOCATION">c:/Users/brehm/Downloads/project_mips_ip/project_mips_ip/project_mips_ip.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5ca8e9b4_ARCHIVE_LOCATION">c:/Users/brehm/Downloads/project_mips_ip/project_mips_ip/project_mips_ip.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7342eac3_ARCHIVE_LOCATION">c:/Users/brehm/Downloads/project_mips_ip/project_mips_ip/project_mips_ip.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1f70a1dc_ARCHIVE_LOCATION">c:/Users/brehm/Downloads/project_mips_ip/project_mips_ip/project_mips_ip.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@745c60b7_ARCHIVE_LOCATION">c:/Users/brehm/Downloads/project_mips_ip/project_mips_ip/project_mips_ip.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@542c9f95_ARCHIVE_LOCATION">c:/Users/brehm/Downloads/project_mips_ip/project_mips_ip/project_mips_ip.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7559bd8f_ARCHIVE_LOCATION">c:/Users/brehm/Downloads/project_mips_ip/project_mips_ip/project_mips_ip.srcs/sources_1/new</xilinx:tag>
+      </xilinx:tags>
+      <xilinx:configElementInfos>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.CLK.ASSOCIATED_BUSIF" xilinx:valuePermission="bd_and_user"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.CLK.ASSOCIATED_RESET" xilinx:valuePermission="bd_and_user"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.CLK.CLK_DOMAIN" xilinx:valueSource="default_prop" xilinx:valuePermission="bd_and_user"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.CLK.FREQ_HZ" xilinx:valuePermission="bd_and_user"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.CLK.FREQ_TOLERANCE_HZ" xilinx:valuePermission="bd_and_user"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.CLK.PHASE" xilinx:valuePermission="bd_and_user"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.RST.POLARITY" xilinx:valuePermission="bd_and_user"/>
+      </xilinx:configElementInfos>
+    </xilinx:coreExtensions>
+    <xilinx:packagingInfo>
+      <xilinx:xilinxVersion>2019.1</xilinx:xilinxVersion>
+      <xilinx:checksum xilinx:scope="busInterfaces" xilinx:value="795d3ab6"/>
+      <xilinx:checksum xilinx:scope="fileGroups" xilinx:value="d17a36e6"/>
+      <xilinx:checksum xilinx:scope="ports" xilinx:value="2f26de90"/>
+      <xilinx:checksum xilinx:scope="parameters" xilinx:value="e8d30142"/>
+    </xilinx:packagingInfo>
+  </spirit:vendorExtensions>
+</spirit:component>

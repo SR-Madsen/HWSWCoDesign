@@ -1,0 +1,9 @@
+# compile vhdl design source files
+vhdl xil_defaultlib  \
+"../../../../project_mips_ip.srcs/sources_1/new/mem.vhd" \
+"../../../../project_mips_ip.srcs/sources_1/new/mips_bram_iface.vhd" \
+"../../../../project_mips_ip.srcs/sources_1/new/reg_bank.vhd" \
+"../../../../project_mips_ip.srcs/sim_1/imports/sources_project_mips_book_original/mips_book_original_tb.vhd" \
+
+# Do not sort compile order
+nosort

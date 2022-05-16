@@ -1,0 +1,42 @@
+Vivado Simulator 2018.3
+Time resolution is 1 ps
+Error: unexpected value. i = 
+Time: 2080 ns  Iteration: 0  Process: /mips_tb/line__121  File: C:/Users/brehm/Documents/repos/hscod/ip_cores/project_mips_ip/project_mips_ip.srcs/sim_1/imports/sources_project_mips_book_original/mips_book_original_tb.vhd
+Error: unexpected value. i = 
+Time: 2160 ns  Iteration: 0  Process: /mips_tb/line__121  File: C:/Users/brehm/Documents/repos/hscod/ip_cores/project_mips_ip/project_mips_ip.srcs/sim_1/imports/sources_project_mips_book_original/mips_book_original_tb.vhd
+Error: unexpected value. i = 
+Time: 2240 ns  Iteration: 0  Process: /mips_tb/line__121  File: C:/Users/brehm/Documents/repos/hscod/ip_cores/project_mips_ip/project_mips_ip.srcs/sim_1/imports/sources_project_mips_book_original/mips_book_original_tb.vhd
+Error: unexpected value. i = 
+Time: 2320 ns  Iteration: 0  Process: /mips_tb/line__121  File: C:/Users/brehm/Documents/repos/hscod/ip_cores/project_mips_ip/project_mips_ip.srcs/sim_1/imports/sources_project_mips_book_original/mips_book_original_tb.vhd
+Note: Testing Finished:
+Time: 2320 ns  Iteration: 0  Process: /mips_tb/line__121  File: C:/Users/brehm/Documents/repos/hscod/ip_cores/project_mips_ip/project_mips_ip.srcs/sim_1/imports/sources_project_mips_book_original/mips_book_original_tb.vhd
+Error: unexpected value. i = 
+Time: 4400 ns  Iteration: 0  Process: /mips_tb/line__121  File: C:/Users/brehm/Documents/repos/hscod/ip_cores/project_mips_ip/project_mips_ip.srcs/sim_1/imports/sources_project_mips_book_original/mips_book_original_tb.vhd
+Error: unexpected value. i = 
+Time: 4480 ns  Iteration: 0  Process: /mips_tb/line__121  File: C:/Users/brehm/Documents/repos/hscod/ip_cores/project_mips_ip/project_mips_ip.srcs/sim_1/imports/sources_project_mips_book_original/mips_book_original_tb.vhd
+Error: unexpected value. i = 
+Time: 4560 ns  Iteration: 0  Process: /mips_tb/line__121  File: C:/Users/brehm/Documents/repos/hscod/ip_cores/project_mips_ip/project_mips_ip.srcs/sim_1/imports/sources_project_mips_book_original/mips_book_original_tb.vhd
+Error: unexpected value. i = 
+Time: 4640 ns  Iteration: 0  Process: /mips_tb/line__121  File: C:/Users/brehm/Documents/repos/hscod/ip_cores/project_mips_ip/project_mips_ip.srcs/sim_1/imports/sources_project_mips_book_original/mips_book_original_tb.vhd
+Note: Testing Finished:
+Time: 4640 ns  Iteration: 0  Process: /mips_tb/line__121  File: C:/Users/brehm/Documents/repos/hscod/ip_cores/project_mips_ip/project_mips_ip.srcs/sim_1/imports/sources_project_mips_book_original/mips_book_original_tb.vhd
+Error: unexpected value. i = 
+Time: 2080 ns  Iteration: 0  Process: /mips_tb/line__121  File: C:/Users/brehm/Documents/repos/hscod/ip_cores/project_mips_ip/project_mips_ip.srcs/sim_1/imports/sources_project_mips_book_original/mips_book_original_tb.vhd
+Error: unexpected value. i = 
+Time: 2160 ns  Iteration: 0  Process: /mips_tb/line__121  File: C:/Users/brehm/Documents/repos/hscod/ip_cores/project_mips_ip/project_mips_ip.srcs/sim_1/imports/sources_project_mips_book_original/mips_book_original_tb.vhd
+Error: unexpected value. i = 
+Time: 2240 ns  Iteration: 0  Process: /mips_tb/line__121  File: C:/Users/brehm/Documents/repos/hscod/ip_cores/project_mips_ip/project_mips_ip.srcs/sim_1/imports/sources_project_mips_book_original/mips_book_original_tb.vhd
+Error: unexpected value. i = 
+Time: 2320 ns  Iteration: 0  Process: /mips_tb/line__121  File: C:/Users/brehm/Documents/repos/hscod/ip_cores/project_mips_ip/project_mips_ip.srcs/sim_1/imports/sources_project_mips_book_original/mips_book_original_tb.vhd
+Note: Testing Finished:
+Time: 2320 ns  Iteration: 0  Process: /mips_tb/line__121  File: C:/Users/brehm/Documents/repos/hscod/ip_cores/project_mips_ip/project_mips_ip.srcs/sim_1/imports/sources_project_mips_book_original/mips_book_original_tb.vhd
+Stopped at time : 1410 ns : File "C:/Users/brehm/Documents/repos/hscod/ip_cores/project_mips_ip/project_mips_ip.srcs/sources_1/new/mips_bram_iface.vhd" Line 188
+Stopped at time : 1410 ns : File "C:/Users/brehm/Documents/repos/hscod/ip_cores/project_mips_ip/project_mips_ip.srcs/sources_1/new/mips_bram_iface.vhd" Line 188
+Stopped at time : 1430 ns : File "C:/Users/brehm/Documents/repos/hscod/ip_cores/project_mips_ip/project_mips_ip.srcs/sources_1/new/mips_bram_iface.vhd" Line 220
+Stopped at time : 1450 ns : File "C:/Users/brehm/Documents/repos/hscod/ip_cores/project_mips_ip/project_mips_ip.srcs/sources_1/new/mips_bram_iface.vhd" Line 220
+Stopped at time : 590 ns : File "C:/Users/brehm/Documents/repos/hscod/ip_cores/project_mips_ip/project_mips_ip.srcs/sources_1/new/mips_bram_iface.vhd" Line 221
+Stopped at time : 590 ns : File "C:/Users/brehm/Documents/repos/hscod/ip_cores/project_mips_ip/project_mips_ip.srcs/sources_1/new/mips_bram_iface.vhd" Line 221
+Stopped at time : 1410 ns : File "C:/Users/brehm/Documents/repos/hscod/ip_cores/project_mips_ip/project_mips_ip.srcs/sources_1/new/mips_bram_iface.vhd" Line 188
+Stopped at time : 1450 ns : File "C:/Users/brehm/Documents/repos/hscod/ip_cores/project_mips_ip/project_mips_ip.srcs/sources_1/new/mips_bram_iface.vhd" Line 225
+Stopped at time : 1550 ns : File "C:/Users/brehm/Documents/repos/hscod/ip_cores/project_mips_ip/project_mips_ip.srcs/sources_1/new/mips_bram_iface.vhd" Line 225
+Stopped at time : 1610 ns : File "C:/Users/brehm/Documents/repos/hscod/ip_cores/project_mips_ip/project_mips_ip.srcs/sources_1/new/mips_bram_iface.vhd" Line 225

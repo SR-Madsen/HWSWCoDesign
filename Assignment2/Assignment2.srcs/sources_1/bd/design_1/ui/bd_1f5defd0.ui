@@ -1,17 +1,27 @@
 {
    "ActiveEmotionalView":"Default View",
    "Default View_ScaleFactor":"1.0",
-   "Default View_TopLeft":"-509,-409",
+   "Default View_TopLeft":"-344,-105",
    "ExpandedHierarchyInLayout":"",
    "guistr":"# # String gsaved with Nlview 7.0r4  2019-12-20 bk=1.5203 VDI=41 GEI=36 GUI=JA:9.0 TLS
 #  -string -flagsOSRD
-preplace port BRAM_PORTA_0 -pg 1 -lvl 0 -x -10 -y -160 -defaultsOSRD
-preplace port BRAM_PORTB_0 -pg 1 -lvl 0 -x -10 -y -140 -defaultsOSRD
-preplace inst blk_mem_gen_0 -pg 1 -lvl 1 -x 140 -y -150 -defaultsOSRD
-preplace netloc BRAM_PORTA_0_1 1 0 1 N -160
-preplace netloc BRAM_PORTB_0_1 1 0 1 N -140
-levelinfo -pg 1 -10 140 280
-pagesize -pg 1 -db -bbox -sgen -180 -220 280 120
+preplace port BRAM_PORTB_0 -pg 1 -lvl 0 -x 0 -y 250 -defaultsOSRD
+preplace port CLK_0 -pg 1 -lvl 0 -x 0 -y 20 -defaultsOSRD
+preplace port RST_0 -pg 1 -lvl 0 -x 0 -y 100 -defaultsOSRD
+preplace port rsta_0 -pg 1 -lvl 0 -x 0 -y 210 -defaultsOSRD
+preplace inst blk_mem_gen_0 -pg 1 -lvl 2 -x 460 -y 170 -defaultsOSRD
+preplace inst MIPS_BRAM_IFACE_0 -pg 1 -lvl 1 -x 160 -y 100 -defaultsOSRD
+preplace netloc CLK_0_1 1 0 2 20 10 330J
+preplace netloc MIPS_BRAM_IFACE_0_ADDR 1 1 1 N 110
+preplace netloc MIPS_BRAM_IFACE_0_Data_Out 1 1 1 310 130n
+preplace netloc blk_mem_gen_0_douta 1 0 2 20 190 310J
+preplace netloc RST_0_1 1 0 1 NJ 100
+preplace netloc MIPS_BRAM_IFACE_0_WE 1 1 1 300 90n
+preplace netloc MIPS_BRAM_IFACE_0_CS 1 1 1 320 70n
+preplace netloc rsta_0_1 1 0 2 NJ 210 NJ
+preplace netloc BRAM_PORTB_0_1 1 0 2 NJ 250 NJ
+levelinfo -pg 1 0 160 460 600
+pagesize -pg 1 -db -bbox -sgen -170 0 600 310
 "
 }
-
+0

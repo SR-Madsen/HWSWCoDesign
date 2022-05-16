@@ -1,0 +1,7 @@
+Running: xsim.dir/MIPS_BRAM_IFACE_behav/xsimk.exe -simmode gui -wdb MIPS_BRAM_IFACE_behav.wdb -simrunnum 0 -socket 58026
+Design successfully loaded
+Design Loading Memory Usage: 5212 KB (Peak: 5212 KB)
+Design Loading CPU Usage: 15 ms
+Simulation completed
+Simulation Memory Usage: 5844 KB (Peak: 5844 KB)
+Simulation CPU Usage: 46 ms

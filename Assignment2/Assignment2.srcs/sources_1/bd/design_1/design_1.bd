@@ -1,7 +1,7 @@
 {
   "design": {
     "design_info": {
-      "boundary_crc": "0x34BDED1C29A7B145",
+      "boundary_crc": "0xA6FB9D97A7AE959E",
       "device": "xc7z020clg484-1",
       "name": "design_1",
       "rev_ctrl_bd_flag": "RevCtrlBdOff",
@@ -10,10 +10,11 @@
       "validated": "true"
     },
     "design_tree": {
-      "blk_mem_gen_0": ""
+      "blk_mem_gen_0": "",
+      "MIPS_BRAM_IFACE_0": ""
     },
     "interface_ports": {
-      "BRAM_PORTA_0": {
+      "BRAM_PORTB_0": {
         "mode": "Slave",
         "vlnv": "xilinx.com:interface:bram_rtl:1.0",
         "parameters": {
@@ -37,28 +38,63 @@
             "value_src": "default"
           }
         }
-      },
-      "BRAM_PORTB_0": {
-        "mode": "Slave",
-        "vlnv": "xilinx.com:interface:bram_rtl:1.0",
+      }
+    },
+    "ports": {
+      "CLK_0": {
+        "type": "clk",
+        "direction": "I",
         "parameters": {
-          "MEM_SIZE": {
-            "value": "8192",
+          "ASSOCIATED_RESET": {
+            "value": "RST_0",
             "value_src": "default"
           },
-          "MEM_WIDTH": {
-            "value": "32",
+          "CLK_DOMAIN": {
+            "value": "design_1_CLK_0",
             "value_src": "default"
           },
-          "MEM_ECC": {
-            "value": "NONE",
+          "FREQ_HZ": {
+            "value": "100000000",
             "value_src": "default"
           },
-          "MASTER_TYPE": {
-            "value": "BRAM_CTRL"
+          "FREQ_TOLERANCE_HZ": {
+            "value": "0",
+            "value_src": "default"
           },
-          "READ_LATENCY": {
-            "value": "1",
+          "INSERT_VIP": {
+            "value": "0",
+            "value_src": "default"
+          },
+          "PHASE": {
+            "value": "0.000",
+            "value_src": "default"
+          }
+        }
+      },
+      "RST_0": {
+        "type": "rst",
+        "direction": "I",
+        "parameters": {
+          "INSERT_VIP": {
+            "value": "0",
+            "value_src": "default"
+          },
+          "POLARITY": {
+            "value": "ACTIVE_LOW",
+            "value_src": "default"
+          }
+        }
+      },
+      "rsta_0": {
+        "type": "rst",
+        "direction": "I",
+        "parameters": {
+          "INSERT_VIP": {
+            "value": "0",
+            "value_src": "default"
+          },
+          "POLARITY": {
+            "value": "ACTIVE_LOW",
             "value_src": "default"
           }
         }
@@ -106,19 +142,68 @@
             "value": "BRAM_Controller"
           }
         }
+      },
+      "MIPS_BRAM_IFACE_0": {
+        "vlnv": "sdu.dk:user:MIPS_BRAM_IFACE:1.0",
+        "xci_name": "design_1_MIPS_BRAM_IFACE_0_0"
       }
     },
     "interface_nets": {
-      "BRAM_PORTA_0_1": {
-        "interface_ports": [
-          "BRAM_PORTA_0",
-          "blk_mem_gen_0/BRAM_PORTA"
-        ]
-      },
       "BRAM_PORTB_0_1": {
         "interface_ports": [
           "BRAM_PORTB_0",
           "blk_mem_gen_0/BRAM_PORTB"
+        ]
+      }
+    },
+    "nets": {
+      "CLK_0_1": {
+        "ports": [
+          "CLK_0",
+          "MIPS_BRAM_IFACE_0/CLK",
+          "blk_mem_gen_0/clka"
+        ]
+      },
+      "MIPS_BRAM_IFACE_0_ADDR": {
+        "ports": [
+          "MIPS_BRAM_IFACE_0/ADDR",
+          "blk_mem_gen_0/addra"
+        ]
+      },
+      "MIPS_BRAM_IFACE_0_Data_Out": {
+        "ports": [
+          "MIPS_BRAM_IFACE_0/Data_Out",
+          "blk_mem_gen_0/dina"
+        ]
+      },
+      "blk_mem_gen_0_douta": {
+        "ports": [
+          "blk_mem_gen_0/douta",
+          "MIPS_BRAM_IFACE_0/Data_In"
+        ]
+      },
+      "RST_0_1": {
+        "ports": [
+          "RST_0",
+          "MIPS_BRAM_IFACE_0/RST"
+        ]
+      },
+      "MIPS_BRAM_IFACE_0_WE": {
+        "ports": [
+          "MIPS_BRAM_IFACE_0/WE",
+          "blk_mem_gen_0/wea"
+        ]
+      },
+      "MIPS_BRAM_IFACE_0_CS": {
+        "ports": [
+          "MIPS_BRAM_IFACE_0/CS",
+          "blk_mem_gen_0/ena"
+        ]
+      },
+      "rsta_0_1": {
+        "ports": [
+          "rsta_0",
+          "blk_mem_gen_0/rsta"
         ]
       }
     }

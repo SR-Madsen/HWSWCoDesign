@@ -1,0 +1,1 @@
+-wto "3b245691a0b148278c103740dff9231b" --incr --debug "all" --relax --mt "2" -L "xil_defaultlib" -L "secureip" --snapshot "MIPS_BRAM_IFACE_behav" "xil_defaultlib.MIPS_BRAM_IFACE" -log "elaborate.log" 
