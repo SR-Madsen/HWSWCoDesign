@@ -1,7 +1,7 @@
 {
   "design": {
     "design_info": {
-      "boundary_crc": "0xA6FB9D97A7AE959E",
+      "boundary_crc": "0x58E65A5655F21745",
       "device": "xc7z020clg484-1",
       "name": "design_1",
       "rev_ctrl_bd_flag": "RevCtrlBdOff",
@@ -11,7 +11,13 @@
     },
     "design_tree": {
       "blk_mem_gen_0": "",
-      "MIPS_BRAM_IFACE_0": ""
+      "MIPS_BRAM_IFACE_0": "",
+      "MIPS_BRAM_IFACE_1": "",
+      "blk_mem_gen_1": "",
+      "gpio_module_0": "",
+      "addr_decoder_0": "",
+      "gpio_module_1": "",
+      "addr_decoder_1": ""
     },
     "interface_ports": {
       "BRAM_PORTB_0": {
@@ -32,6 +38,37 @@
           },
           "MASTER_TYPE": {
             "value": "BRAM_CTRL"
+          },
+          "READ_WRITE_MODE": {
+            "value": "READ_WRITE"
+          },
+          "READ_LATENCY": {
+            "value": "1",
+            "value_src": "default"
+          }
+        }
+      },
+      "BRAM_PORTB_1": {
+        "mode": "Slave",
+        "vlnv": "xilinx.com:interface:bram_rtl:1.0",
+        "parameters": {
+          "MEM_SIZE": {
+            "value": "8192",
+            "value_src": "default"
+          },
+          "MEM_WIDTH": {
+            "value": "32",
+            "value_src": "default"
+          },
+          "MEM_ECC": {
+            "value": "NONE",
+            "value_src": "default"
+          },
+          "MASTER_TYPE": {
+            "value": "BRAM_CTRL"
+          },
+          "READ_WRITE_MODE": {
+            "value": "READ_WRITE"
           },
           "READ_LATENCY": {
             "value": "1",
@@ -98,6 +135,46 @@
             "value_src": "default"
           }
         }
+      },
+      "PORTA_0": {
+        "direction": "O",
+        "left": "7",
+        "right": "0"
+      },
+      "PORTB_0": {
+        "direction": "O",
+        "left": "7",
+        "right": "0"
+      },
+      "PORTC_0": {
+        "direction": "O",
+        "left": "7",
+        "right": "0"
+      },
+      "PORTD_0": {
+        "direction": "O",
+        "left": "7",
+        "right": "0"
+      },
+      "PORTA_1": {
+        "direction": "O",
+        "left": "7",
+        "right": "0"
+      },
+      "PORTB_1": {
+        "direction": "O",
+        "left": "7",
+        "right": "0"
+      },
+      "PORTC_1": {
+        "direction": "O",
+        "left": "7",
+        "right": "0"
+      },
+      "PORTD_1": {
+        "direction": "O",
+        "left": "7",
+        "right": "0"
       }
     },
     "components": {
@@ -146,9 +223,77 @@
       "MIPS_BRAM_IFACE_0": {
         "vlnv": "sdu.dk:user:MIPS_BRAM_IFACE:1.0",
         "xci_name": "design_1_MIPS_BRAM_IFACE_0_0"
+      },
+      "MIPS_BRAM_IFACE_1": {
+        "vlnv": "sdu.dk:user:MIPS_BRAM_IFACE:1.0",
+        "xci_name": "design_1_MIPS_BRAM_IFACE_1_0"
+      },
+      "blk_mem_gen_1": {
+        "vlnv": "xilinx.com:ip:blk_mem_gen:8.4",
+        "xci_name": "design_1_blk_mem_gen_0_1",
+        "parameters": {
+          "EN_SAFETY_CKT": {
+            "value": "true"
+          },
+          "Enable_32bit_Address": {
+            "value": "true"
+          },
+          "Enable_B": {
+            "value": "Use_ENB_Pin"
+          },
+          "Memory_Type": {
+            "value": "True_Dual_Port_RAM"
+          },
+          "Port_B_Clock": {
+            "value": "100"
+          },
+          "Port_B_Enable_Rate": {
+            "value": "100"
+          },
+          "Port_B_Write_Rate": {
+            "value": "50"
+          },
+          "Register_PortA_Output_of_Memory_Primitives": {
+            "value": "false"
+          },
+          "Register_PortB_Output_of_Memory_Primitives": {
+            "value": "false"
+          },
+          "Use_RSTA_Pin": {
+            "value": "true"
+          },
+          "Use_RSTB_Pin": {
+            "value": "true"
+          },
+          "use_bram_block": {
+            "value": "BRAM_Controller"
+          }
+        }
+      },
+      "gpio_module_0": {
+        "vlnv": "sdu.dk:user:gpio_module:1.0",
+        "xci_name": "design_1_gpio_module_0_0"
+      },
+      "addr_decoder_0": {
+        "vlnv": "sdu.dk:user:addr_decoder:1.1",
+        "xci_name": "design_1_addr_decoder_0_0"
+      },
+      "gpio_module_1": {
+        "vlnv": "sdu.dk:user:gpio_module:1.0",
+        "xci_name": "design_1_gpio_module_1_0"
+      },
+      "addr_decoder_1": {
+        "vlnv": "sdu.dk:user:addr_decoder:1.1",
+        "xci_name": "design_1_addr_decoder_0_1"
       }
     },
     "interface_nets": {
+      "BRAM_PORTB_1_1": {
+        "interface_ports": [
+          "BRAM_PORTB_1",
+          "blk_mem_gen_1/BRAM_PORTB"
+        ]
+      },
       "BRAM_PORTB_0_1": {
         "interface_ports": [
           "BRAM_PORTB_0",
@@ -161,19 +306,26 @@
         "ports": [
           "CLK_0",
           "MIPS_BRAM_IFACE_0/CLK",
-          "blk_mem_gen_0/clka"
+          "blk_mem_gen_0/clka",
+          "blk_mem_gen_1/clka",
+          "MIPS_BRAM_IFACE_1/CLK",
+          "gpio_module_0/clk",
+          "gpio_module_1/clk"
         ]
       },
       "MIPS_BRAM_IFACE_0_ADDR": {
         "ports": [
           "MIPS_BRAM_IFACE_0/ADDR",
-          "blk_mem_gen_0/addra"
+          "blk_mem_gen_0/addra",
+          "addr_decoder_0/addr_in",
+          "gpio_module_0/addr"
         ]
       },
       "MIPS_BRAM_IFACE_0_Data_Out": {
         "ports": [
           "MIPS_BRAM_IFACE_0/Data_Out",
-          "blk_mem_gen_0/dina"
+          "blk_mem_gen_0/dina",
+          "gpio_module_0/data"
         ]
       },
       "blk_mem_gen_0_douta": {
@@ -185,7 +337,8 @@
       "RST_0_1": {
         "ports": [
           "RST_0",
-          "MIPS_BRAM_IFACE_0/RST"
+          "MIPS_BRAM_IFACE_0/RST",
+          "MIPS_BRAM_IFACE_1/RST"
         ]
       },
       "MIPS_BRAM_IFACE_0_WE": {
@@ -194,16 +347,122 @@
           "blk_mem_gen_0/wea"
         ]
       },
-      "MIPS_BRAM_IFACE_0_CS": {
-        "ports": [
-          "MIPS_BRAM_IFACE_0/CS",
-          "blk_mem_gen_0/ena"
-        ]
-      },
       "rsta_0_1": {
         "ports": [
           "rsta_0",
-          "blk_mem_gen_0/rsta"
+          "blk_mem_gen_0/rsta",
+          "blk_mem_gen_1/rsta"
+        ]
+      },
+      "MIPS_BRAM_IFACE_1_ADDR": {
+        "ports": [
+          "MIPS_BRAM_IFACE_1/ADDR",
+          "blk_mem_gen_1/addra",
+          "gpio_module_1/addr",
+          "addr_decoder_1/addr_in"
+        ]
+      },
+      "MIPS_BRAM_IFACE_1_WE": {
+        "ports": [
+          "MIPS_BRAM_IFACE_1/WE",
+          "blk_mem_gen_1/wea"
+        ]
+      },
+      "MIPS_BRAM_IFACE_1_Data_Out": {
+        "ports": [
+          "MIPS_BRAM_IFACE_1/Data_Out",
+          "blk_mem_gen_1/dina",
+          "gpio_module_1/data"
+        ]
+      },
+      "blk_mem_gen_1_douta": {
+        "ports": [
+          "blk_mem_gen_1/douta",
+          "MIPS_BRAM_IFACE_1/Data_In"
+        ]
+      },
+      "addr_decoder_0_gpio_cs": {
+        "ports": [
+          "addr_decoder_0/gpio_cs",
+          "gpio_module_0/cs"
+        ]
+      },
+      "addr_decoder_0_mem_cs": {
+        "ports": [
+          "addr_decoder_0/mem_cs",
+          "blk_mem_gen_0/ena"
+        ]
+      },
+      "MIPS_BRAM_IFACE_0_CS": {
+        "ports": [
+          "MIPS_BRAM_IFACE_0/CS",
+          "addr_decoder_0/mem_cs_in"
+        ]
+      },
+      "addr_decoder_1_mem_cs": {
+        "ports": [
+          "addr_decoder_1/mem_cs",
+          "blk_mem_gen_1/ena"
+        ]
+      },
+      "addr_decoder_1_gpio_cs": {
+        "ports": [
+          "addr_decoder_1/gpio_cs",
+          "gpio_module_1/cs"
+        ]
+      },
+      "MIPS_BRAM_IFACE_1_CS": {
+        "ports": [
+          "MIPS_BRAM_IFACE_1/CS",
+          "addr_decoder_1/mem_cs_in"
+        ]
+      },
+      "gpio_module_0_PORTA": {
+        "ports": [
+          "gpio_module_0/PORTA",
+          "PORTA_0"
+        ]
+      },
+      "gpio_module_0_PORTB": {
+        "ports": [
+          "gpio_module_0/PORTB",
+          "PORTB_0"
+        ]
+      },
+      "gpio_module_0_PORTC": {
+        "ports": [
+          "gpio_module_0/PORTC",
+          "PORTC_0"
+        ]
+      },
+      "gpio_module_0_PORTD": {
+        "ports": [
+          "gpio_module_0/PORTD",
+          "PORTD_0"
+        ]
+      },
+      "gpio_module_1_PORTA": {
+        "ports": [
+          "gpio_module_1/PORTA",
+          "PORTA_1"
+        ]
+      },
+      "gpio_module_1_PORTB": {
+        "ports": [
+          "gpio_module_1/PORTB",
+          "PORTB_1"
+        ]
+      },
+      "gpio_module_1_PORTC": {
+        "ports": [
+          "gpio_module_1/PORTC",
+          "PORTC_1"
+        ]
+      },
+      "gpio_module_1_PORTD": {
+        "ports": [
+          "gpio_module_1/PORTD",
+          "PORTD_1"
         ]
       }
     }

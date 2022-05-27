@@ -99,6 +99,7 @@
       <Filter Type="Srcs"/>
       <File Path="$PSRCDIR/sim_1/imports/Desktop/mips_bram_gpio_tb.vhd">
         <FileInfo>
+          <Attr Name="UserDisabled" Val="1"/>
           <Attr Name="ImportPath" Val="$PPRDIR/../../../mips_bram_gpio_tb.vhd"/>
           <Attr Name="ImportTime" Val="1652138504"/>
           <Attr Name="UsedIn" Val="synthesis"/>
@@ -108,7 +109,6 @@
       <File Path="$PSRCDIR/sim_1/imports/Downloads/dp_bram_tb.vhd">
         <FileInfo>
           <Attr Name="UserDisabled" Val="1"/>
-          <Attr Name="AutoDisabled" Val="1"/>
           <Attr Name="ImportPath" Val="$PPRDIR/../../../../Downloads/dp_bram_tb.vhd"/>
           <Attr Name="ImportTime" Val="1651136649"/>
           <Attr Name="UsedIn" Val="synthesis"/>
@@ -117,7 +117,7 @@
       </File>
       <Config>
         <Option Name="DesignMode" Val="RTL"/>
-        <Option Name="TopModule" Val="design_1_wrapper_tb"/>
+        <Option Name="TopModule" Val="design_1_wrapper"/>
         <Option Name="TopLib" Val="xil_defaultlib"/>
         <Option Name="TopAutoSet" Val="TRUE"/>
         <Option Name="TransportPathDelay" Val="0"/>
