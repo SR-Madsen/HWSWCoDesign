@@ -1,7 +1,7 @@
 --Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------
 --Tool Version: Vivado v.2020.1 (lin64) Build 2902540 Wed May 27 19:54:35 MDT 2020
---Date        : Thu Jun  2 10:05:20 2022
+--Date        : Thu Jun  9 10:24:03 2022
 --Host        : Ubuntu-ZBook-15-G2 running 64-bit Ubuntu 18.04.6 LTS
 --Command     : generate_target design_1_wrapper.bd
 --Design      : design_1_wrapper
@@ -55,20 +55,20 @@ architecture STRUCTURE of design_1_wrapper is
     PORTB_1 : out STD_LOGIC_VECTOR ( 7 downto 0 );
     PORTC_1 : out STD_LOGIC_VECTOR ( 7 downto 0 );
     PORTD_1 : out STD_LOGIC_VECTOR ( 7 downto 0 );
-    BRAM_PORTB_1_addr : in STD_LOGIC_VECTOR ( 31 downto 0 );
-    BRAM_PORTB_1_clk : in STD_LOGIC;
-    BRAM_PORTB_1_din : in STD_LOGIC_VECTOR ( 31 downto 0 );
-    BRAM_PORTB_1_dout : out STD_LOGIC_VECTOR ( 31 downto 0 );
-    BRAM_PORTB_1_en : in STD_LOGIC;
-    BRAM_PORTB_1_rst : in STD_LOGIC;
-    BRAM_PORTB_1_we : in STD_LOGIC_VECTOR ( 3 downto 0 );
     BRAM_PORTB_0_addr : in STD_LOGIC_VECTOR ( 31 downto 0 );
     BRAM_PORTB_0_clk : in STD_LOGIC;
     BRAM_PORTB_0_din : in STD_LOGIC_VECTOR ( 31 downto 0 );
     BRAM_PORTB_0_dout : out STD_LOGIC_VECTOR ( 31 downto 0 );
     BRAM_PORTB_0_en : in STD_LOGIC;
     BRAM_PORTB_0_rst : in STD_LOGIC;
-    BRAM_PORTB_0_we : in STD_LOGIC_VECTOR ( 3 downto 0 )
+    BRAM_PORTB_0_we : in STD_LOGIC_VECTOR ( 3 downto 0 );
+    BRAM_PORTB_1_addr : in STD_LOGIC_VECTOR ( 31 downto 0 );
+    BRAM_PORTB_1_clk : in STD_LOGIC;
+    BRAM_PORTB_1_din : in STD_LOGIC_VECTOR ( 31 downto 0 );
+    BRAM_PORTB_1_dout : out STD_LOGIC_VECTOR ( 31 downto 0 );
+    BRAM_PORTB_1_en : in STD_LOGIC;
+    BRAM_PORTB_1_rst : in STD_LOGIC;
+    BRAM_PORTB_1_we : in STD_LOGIC_VECTOR ( 3 downto 0 )
   );
   end component design_1;
 begin

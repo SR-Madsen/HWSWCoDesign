@@ -1,7 +1,7 @@
 {
    "ActiveEmotionalView":"Default View",
    "Default View_ScaleFactor":"0.945498",
-   "Default View_TopLeft":"-199,195",
+   "Default View_TopLeft":"-199,2",
    "ExpandedHierarchyInLayout":"",
    "guistr":"# # String gsaved with Nlview 7.0r4  2019-12-20 bk=1.5203 VDI=41 GEI=36 GUI=JA:9.0 TLS
 #  -string -flagsOSRD
@@ -51,8 +51,8 @@ preplace netloc gpio_module_1_PORTA 1 3 1 NJ 750
 preplace netloc gpio_module_1_PORTB 1 3 1 NJ 770
 preplace netloc gpio_module_1_PORTC 1 3 1 NJ 790
 preplace netloc gpio_module_1_PORTD 1 3 1 NJ 810
-preplace netloc BRAM_PORTB_1_1 1 0 3 NJ 650 NJ 650 NJ
 preplace netloc BRAM_PORTB_0_1 1 0 3 NJ 390 NJ 390 NJ
+preplace netloc BRAM_PORTB_1_1 1 0 3 NJ 650 NJ 650 NJ
 levelinfo -pg 1 0 180 450 780 930
 pagesize -pg 1 -db -bbox -sgen -170 0 1080 1010
 "
