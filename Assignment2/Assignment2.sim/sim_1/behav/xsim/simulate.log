@@ -6,8 +6,27 @@ blk_mem_gen_v8_4_4 collision detected at time: 110000, Instance: dual_mips_tb.uu
 blk_mem_gen_v8_4_4 collision detected at time: 110000, Instance: dual_mips_tb.uut.design_1_i.blk_mem_gen_1.inst.\native_mem_mapped_module.blk_mem_gen_v8_4_4_inst , A read address: 0, B write address: 0
 blk_mem_gen_v8_4_4 collision detected at time: 130000, Instance: dual_mips_tb.uut.design_1_i.blk_mem_gen_0.inst.\native_mem_mapped_module.blk_mem_gen_v8_4_4_inst , A read address: 0, B write address: 0
 blk_mem_gen_v8_4_4 collision detected at time: 130000, Instance: dual_mips_tb.uut.design_1_i.blk_mem_gen_1.inst.\native_mem_mapped_module.blk_mem_gen_v8_4_4_inst , A read address: 0, B write address: 0
-ERROR: Index 4 out of bound 0 to 3
-Time: 2590 ns  Iteration: 1  Process: /dual_mips_tb/uut/design_1_i/gpio_module_1/U0/line__57
-  File: /home/sebastian/Desktop/Git/HWSWCoDesign/Assignment2/Assignment2.ip_user_files/bd/design_1/ipshared/f64d/project_hscod_mips_gpio_module.srcs/sources_1/new/gpio_module.vhd
-
-HDL Line: /home/sebastian/Desktop/Git/HWSWCoDesign/Assignment2/Assignment2.ip_user_files/bd/design_1/ipshared/f64d/project_hscod_mips_gpio_module.srcs/sources_1/new/gpio_module.vhd:61
+Block Memory Generator module dual_mips_tb.uut.design_1_i.blk_mem_gen_0.inst.\native_mem_mapped_module.blk_mem_gen_v8_4_4_inst  is using a behavioral model for simulation which will not precisely model memory collision behavior.
+Block Memory Generator module dual_mips_tb.uut.design_1_i.blk_mem_gen_1.inst.\native_mem_mapped_module.blk_mem_gen_v8_4_4_inst  is using a behavioral model for simulation which will not precisely model memory collision behavior.
+blk_mem_gen_v8_4_4 collision detected at time: 110000, Instance: dual_mips_tb.uut.design_1_i.blk_mem_gen_0.inst.\native_mem_mapped_module.blk_mem_gen_v8_4_4_inst , A read address: 0, B write address: 0
+blk_mem_gen_v8_4_4 collision detected at time: 110000, Instance: dual_mips_tb.uut.design_1_i.blk_mem_gen_1.inst.\native_mem_mapped_module.blk_mem_gen_v8_4_4_inst , A read address: 0, B write address: 0
+blk_mem_gen_v8_4_4 collision detected at time: 130000, Instance: dual_mips_tb.uut.design_1_i.blk_mem_gen_0.inst.\native_mem_mapped_module.blk_mem_gen_v8_4_4_inst , A read address: 0, B write address: 0
+blk_mem_gen_v8_4_4 collision detected at time: 130000, Instance: dual_mips_tb.uut.design_1_i.blk_mem_gen_1.inst.\native_mem_mapped_module.blk_mem_gen_v8_4_4_inst , A read address: 0, B write address: 0
+Block Memory Generator module dual_mips_tb.uut.design_1_i.blk_mem_gen_0.inst.\native_mem_mapped_module.blk_mem_gen_v8_4_4_inst  is using a behavioral model for simulation which will not precisely model memory collision behavior.
+Block Memory Generator module dual_mips_tb.uut.design_1_i.blk_mem_gen_1.inst.\native_mem_mapped_module.blk_mem_gen_v8_4_4_inst  is using a behavioral model for simulation which will not precisely model memory collision behavior.
+blk_mem_gen_v8_4_4 collision detected at time: 110000, Instance: dual_mips_tb.uut.design_1_i.blk_mem_gen_0.inst.\native_mem_mapped_module.blk_mem_gen_v8_4_4_inst , A read address: 0, B write address: 0
+blk_mem_gen_v8_4_4 collision detected at time: 110000, Instance: dual_mips_tb.uut.design_1_i.blk_mem_gen_1.inst.\native_mem_mapped_module.blk_mem_gen_v8_4_4_inst , A read address: 0, B write address: 0
+blk_mem_gen_v8_4_4 collision detected at time: 130000, Instance: dual_mips_tb.uut.design_1_i.blk_mem_gen_0.inst.\native_mem_mapped_module.blk_mem_gen_v8_4_4_inst , A read address: 0, B write address: 0
+blk_mem_gen_v8_4_4 collision detected at time: 130000, Instance: dual_mips_tb.uut.design_1_i.blk_mem_gen_1.inst.\native_mem_mapped_module.blk_mem_gen_v8_4_4_inst , A read address: 0, B write address: 0
+Block Memory Generator module dual_mips_tb.uut.design_1_i.blk_mem_gen_0.inst.\native_mem_mapped_module.blk_mem_gen_v8_4_4_inst  is using a behavioral model for simulation which will not precisely model memory collision behavior.
+Block Memory Generator module dual_mips_tb.uut.design_1_i.blk_mem_gen_1.inst.\native_mem_mapped_module.blk_mem_gen_v8_4_4_inst  is using a behavioral model for simulation which will not precisely model memory collision behavior.
+blk_mem_gen_v8_4_4 collision detected at time: 110000, Instance: dual_mips_tb.uut.design_1_i.blk_mem_gen_0.inst.\native_mem_mapped_module.blk_mem_gen_v8_4_4_inst , A read address: 0, B write address: 0
+blk_mem_gen_v8_4_4 collision detected at time: 110000, Instance: dual_mips_tb.uut.design_1_i.blk_mem_gen_1.inst.\native_mem_mapped_module.blk_mem_gen_v8_4_4_inst , A read address: 0, B write address: 0
+blk_mem_gen_v8_4_4 collision detected at time: 130000, Instance: dual_mips_tb.uut.design_1_i.blk_mem_gen_0.inst.\native_mem_mapped_module.blk_mem_gen_v8_4_4_inst , A read address: 0, B write address: 0
+blk_mem_gen_v8_4_4 collision detected at time: 130000, Instance: dual_mips_tb.uut.design_1_i.blk_mem_gen_1.inst.\native_mem_mapped_module.blk_mem_gen_v8_4_4_inst , A read address: 0, B write address: 0
+Block Memory Generator module dual_mips_tb.uut.design_1_i.blk_mem_gen_0.inst.\native_mem_mapped_module.blk_mem_gen_v8_4_4_inst  is using a behavioral model for simulation which will not precisely model memory collision behavior.
+Block Memory Generator module dual_mips_tb.uut.design_1_i.blk_mem_gen_1.inst.\native_mem_mapped_module.blk_mem_gen_v8_4_4_inst  is using a behavioral model for simulation which will not precisely model memory collision behavior.
+blk_mem_gen_v8_4_4 collision detected at time: 110000, Instance: dual_mips_tb.uut.design_1_i.blk_mem_gen_0.inst.\native_mem_mapped_module.blk_mem_gen_v8_4_4_inst , A read address: 0, B write address: 0
+blk_mem_gen_v8_4_4 collision detected at time: 110000, Instance: dual_mips_tb.uut.design_1_i.blk_mem_gen_1.inst.\native_mem_mapped_module.blk_mem_gen_v8_4_4_inst , A read address: 0, B write address: 0
+blk_mem_gen_v8_4_4 collision detected at time: 130000, Instance: dual_mips_tb.uut.design_1_i.blk_mem_gen_0.inst.\native_mem_mapped_module.blk_mem_gen_v8_4_4_inst , A read address: 0, B write address: 0
+blk_mem_gen_v8_4_4 collision detected at time: 130000, Instance: dual_mips_tb.uut.design_1_i.blk_mem_gen_1.inst.\native_mem_mapped_module.blk_mem_gen_v8_4_4_inst , A read address: 0, B write address: 0

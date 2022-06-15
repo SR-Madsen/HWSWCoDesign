@@ -1,2 +1,4 @@
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/sebastian/Desktop/Git/HWSWCoDesign/Assignment2/Assignment2.srcs/sources_1/bd/design_1/hdl/design_1_wrapper.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'design_1_wrapper'
 INFO: [VRFC 10-163] Analyzing VHDL file "/home/sebastian/Desktop/Git/HWSWCoDesign/Assignment2/Assignment2.srcs/sim_1/new/dual_mips_tb.vhd" into library xil_defaultlib
 INFO: [VRFC 10-3107] analyzing entity 'dual_mips_tb'
